@@ -12,10 +12,7 @@ const Update = () => {
       <label htmlFor="abonado">Abonado:</label>
       <input type="date" name="abonado"/><br/>
     </form>
-<<<<<<< HEAD:src/pages/Update.jsx
     </>
-=======
->>>>>>> feature-home:src/components/Update.jsx
     
   )
 }
