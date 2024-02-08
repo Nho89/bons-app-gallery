@@ -2,7 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div>
+      <hr />
+      <p style={{textAlign: "center"}}>@Copyright 2024 BonsApp Gallery · Todos los derechos reservados</p>
+    </div>
   )
 }
 
