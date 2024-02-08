@@ -10,7 +10,7 @@ const Add = () => {
 
   return (
     <>
-      <button type="button" onClick={onClick}><img src="./src/assets/Vector-añadir.png" alt="" style={{border:"0"}} /></button>
+      <button type="button" onClick={onClick}><img src="./src/assets/Vector-añadir.png" alt="" style={{border:"none", outline: 'none',Decoration: 'none', appearance: 'none'}} /></button>
     </>
   )
 }
