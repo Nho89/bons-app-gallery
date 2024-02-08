@@ -5,7 +5,7 @@ const Edit = () => {
   return (
     <>
       
-<button type="button" onClick={onClick}><img src="./src/assets/Vector-añadir.png"
+<button type="button"><img src="./src/assets/Vector-añadir.png"
 alt="botón enviar cambios" />
 </button>
     </>
