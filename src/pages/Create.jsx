@@ -5,8 +5,10 @@ const Create = () => {
     <>
     <form>
 
-        <label htmlFor="image">Foto:  </label>
-        <input type="file" style={{color: "transparent"}} id="image" required/><br/>
+        <label htmlFor="image">Foto:  </label><br />
+        <div style={{}}>
+          <input type="file" style={{color: "transparent"}} id="image"  required/><br/>
+        </div>
         <label htmlFor="especie">Especie:  </label>
         <input type="text" name="especie"/><br/>
         <label htmlFor="date-trasp">Trasplantado: </label>
