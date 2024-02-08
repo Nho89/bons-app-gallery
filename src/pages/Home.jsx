@@ -1,7 +1,6 @@
 import React from 'react';
-import Nav from './Nav';
-import Footer from './Footer';
-import Create from './Create';
+import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 
 
 const Home = () => {
@@ -10,7 +9,6 @@ const Home = () => {
     
     <div>Mi página home</div>
     <Nav/>
-    <Create/>
     <Footer/>
     
     </>
