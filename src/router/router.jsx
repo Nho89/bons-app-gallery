@@ -1,32 +1,29 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../components/Home";
-import Create from "../components/Create";
-import Nav from "../components/Nav";
-import Update from "../components/Update";
-import Footer from "../components/Footer";
+import Home from "../pages/Home";
+import Create from "../pages/Create";
+import Update from "../pages/Update";
+import LayoutPublic from "../components/LayoutPublic";
 
 const router = createBrowserRouter([
     {
       path: "/",
+      element: <LayoutPublic/>,
+      children:[
+        {
+          path: "/",
      element:  <Home/>,
-      
-    },
-    {
-      path: "/nav",
-      element: <Nav/>
-    },
-    {
+        },
+        {
       path:"/create",
-      element: <Create/>
-    },
-    {
+      element: <Create/>,
+      },
+      {
       path: "/update",
-      element: <Update />
+      element: <Update />,
+      },
+    ],
     },
-    {
-      path: "/footer",
-      element: <Footer />
-    }
-
-  ]);
+    
+  ],
+  );
   export  default router;
