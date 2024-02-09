@@ -1,14 +1,15 @@
 import React from 'react'
+import Add from './Add'
 
 const Nav = () => {
   return (
-    <nav class="menu">
-  <ul>
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#">Sobre nosotros</a></li>
-    <li><a href="#">Contacto</a></li>
-  </ul>
-</nav>
+    <>
+    <nav className='navbar' style={{display: "flex", justifyContent: "space-between", padding:"20px"}} >
+      <div >Logo</div>
+           <Add/>
+    </nav>
+    </>
+    
   )
 }
 
