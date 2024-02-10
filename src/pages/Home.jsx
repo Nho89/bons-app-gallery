@@ -1,13 +1,12 @@
 import React from 'react';
-import Delete from '../components/Delete';
-import Modify from '../components/Modify';
+import Card from '../components/Card';
 
 const Home = () => {
   return (
     <>
-    <div>Mi página home</div>
-    <Modify/>
-    <Delete/>
+    <div style={{textAlign:"center", height:"80vh", marginBottom:"15%"}}>
+      <Card/>
+      </div>
     </>
     
   )
