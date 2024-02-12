@@ -1,10 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter} from "react-router-dom";
 import Home from "../pages/Home";
 import Create from "../pages/Create";
 import Update from "../pages/Update";
 import LayoutPublic from "../components/LayoutPublic";
-import Card from "../components/Card";
-
+import {getData} from '../services/bonsaisServe'
+import CardDetail from "../components/CardDetail";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -13,6 +13,7 @@ const router = createBrowserRouter([
         {
           path: "/",
      element:  <Home/>,
+          loader: getData
         },
         {
       path:"/create",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       path: "/update",
       element: <Update />,
       },
+      {
+        path: "/card",
+        element: <CardDetail />,
+      }
     ],
     },
     

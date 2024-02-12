@@ -1,29 +1,25 @@
-import { useLoaderData } from 'react-router-dom';
 import React from 'react'
-import Acebuche2 from '../assets/images/Acebuche2.png';
 import Modify from './Modify';
 import Delete from './Delete';
 import Modal from './Modal'
 
-const getData = async () => {
-  const response = await fetch('http://localhost:5173/server/db.json');
-  const data = await response.json();
-  console.log(data);
-  return data;
-};
 
-const Card = () => {
+const Card = ({bonsais}) => {
   return (
-    <>
-    <div className='Card-bons' style={{textAlign:"center", height:"80vh",width:"100%", display:"flex", alignItems:"center", justifyContent:"end", flexDirection:"column"}}>
+   <>
+   {
+      bonsais.map(bonsai =>{
+        return(
+      <div key={bonsai.id} className='Card-bons' style={{textAlign:"center", height:"80vh",width:"100%", display:"flex", alignItems:"center", justifyContent:"end", flexDirection:"column"}}>
       
-      <div style={{width: "70%"}}><img src={Acebuche2} alt="" style={{maxWidth:"100%", textAlign:"center"}}/></div>
+        <div style={{width: "70%"}}><img src={bonsai.image} alt="" style={{maxWidth:"100%", textAlign:"center"}}/>
+        </div>
       
-      <div style={{display: "flex", flexDirection:"column",alignItems:"center" ,justifyContent:"center",width:"98%",backgroundColor:"#044C40",  borderRadius:"20px", height:"400px"}}>
-        <h3 style={{color:"#F6F0BE", fontSize:"3em"}}>Azalea</h3>
+        <div style={{display: "flex", flexDirection:"column",alignItems:"center" ,justifyContent:"center",width:"98%",backgroundColor:"#044C40",  borderRadius:"20px", height:"400px"}}>
+        <h3 style={{color:"#F6F0BE", fontSize:"3em"}}>{bonsai.especie}</h3>
         <div style={{display:"flex", gap:"80px", color:"#F6F0BE", fontSize:"1em"}}>
-        <p>Trasplantado</p>
-        <p>Abonado</p>  
+        <p>{bonsai.trasplantado}</p>
+        <p>{bonsai.abonado}</p>  
         </div>
         
         <div style={{display:"flex", gap:"20px", alignItems:"center"}} >
@@ -35,17 +31,22 @@ const Card = () => {
             </div>
         </div>
         <div style={{display: "flex", marginTop:"20px", marginBottom:"40px"}}>
-            <button onClick={getData} >Detalles</button>
+            <button>Detalles</button>
         <Modal/>
-      <Modify/>
-      <Delete/>
+        <Modify/>
+        <Delete/>
         </div>
         
-      </div>
+        </div>
 
-    </div>
+      </div>  
     
-    </>
+    
+    )
+  })
+  }
+   
+   </> 
   )
 }
 
