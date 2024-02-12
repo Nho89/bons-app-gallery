@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Create from "../pages/Create";
 import Update from "../pages/Update";
 import LayoutPublic from "../components/LayoutPublic";
+import Card from "../components/Card";
 
 const router = createBrowserRouter([
     {

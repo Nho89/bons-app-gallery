@@ -1,8 +1,16 @@
+import { useLoaderData } from 'react-router-dom';
 import React from 'react'
 import Acebuche2 from '../assets/images/Acebuche2.png';
 import Modify from './Modify';
 import Delete from './Delete';
 import Modal from './Modal'
+
+const getData = async () => {
+  const response = await fetch('http://localhost:5173/server/db.json');
+  const data = await response.json();
+  console.log(data);
+  return data;
+};
 
 const Card = () => {
   return (
@@ -27,7 +35,7 @@ const Card = () => {
             </div>
         </div>
         <div style={{display: "flex", marginTop:"20px", marginBottom:"40px"}}>
-            <button >Detalles</button>
+            <button onClick={getData} >Detalles</button>
         <Modal/>
       <Modify/>
       <Delete/>
