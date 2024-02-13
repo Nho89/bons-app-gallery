@@ -12,10 +12,9 @@ export const getData = async () => {
 
   //UPDATE
   export  const updateData = async () =>{
-    
   }
 
   //DELETE
-  export const deleteData = async () =>{
+  export const deleteData = async (id) =>{
     await fetch(`http://localhost:3000/bonsais/${id}`,{method:"delete"})
   }

@@ -1,10 +1,14 @@
 import React from 'react'
+import {deleteData} from '../services/bonsaisServe'
 
-const Delete = () => {
+const Delete = ({id}) => {
+  console.log(id)
+  const handleDelete = () => {
+    deleteData(id)}
   return (
     <>
     <div>
-        <button>Borrar</button>
+        <button onClick={handleDelete}>Borrar</button>
     </div>
     </>
   
