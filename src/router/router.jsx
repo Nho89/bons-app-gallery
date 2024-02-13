@@ -5,6 +5,7 @@ import Update from "../pages/Update";
 import LayoutPublic from "../components/LayoutPublic";
 import {getData} from '../services/bonsaisServe'
 import CardDetail from "../components/CardDetail";
+
 const router = createBrowserRouter([
     {
       path: "/",
