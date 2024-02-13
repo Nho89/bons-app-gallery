@@ -5,13 +5,6 @@
       "abonado": "5 de mayo de 2023",
       "trasplantado": "18-11-2020",
       "image": "./src/assets/images/pinoblanco.png",
-      "id": "1"
-    },
-    {
-      "especie": "Pino Blanco",
-      "abonado": "5 de mayo de 2023",
-      "trasplantado": "18-11-2020",
-      "image": "./src/assets/images/pinoblanco.png",
       "id": "2"
     },
     {
@@ -20,13 +13,6 @@
       "trasplantado": "18-11-2020",
       "image": "./src/assets/images/pinoblanco.png",
       "id": "3"
-    },
-    {
-      "especie": "Pino Blanco",
-      "abonado": "5 de mayo de 2023",
-      "trasplantado": "18-11-2020",
-      "image": "./src/assets/images/pinoblanco.png",
-      "id": "4"
     }
   ]
 }
