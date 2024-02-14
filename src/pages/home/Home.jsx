@@ -1,6 +1,6 @@
 import { useLoaderData} from 'react-router-dom';
 import React from 'react';
-import Card from '../components/Card';
+import Card from '../../components/card/Card';
 
 const Home = () => {
     const bonsais = useLoaderData();
