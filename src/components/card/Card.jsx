@@ -1,7 +1,7 @@
 import React from 'react'
-import Modify from './Modify';
-import Delete from './Delete';
-import Modal from './Modal'
+import Modify from '../Modify';
+import Delete from '../Delete';
+import Modal from '../Modal'
 
 
 const Card = ({bonsais}) => {
