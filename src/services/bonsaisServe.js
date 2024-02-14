@@ -5,13 +5,14 @@ export const getData = async () => {
   };
 
   //POST
-
   export const postData = async () =>{
 
   }
 
   //UPDATE
-  export  const updateData = async () =>{
+  export  const updateData = async (id) =>{
+    if (onclick===true)
+    await fetch (`http://localhost:3000/bonsais/${id}`,{method:"UPDATE"})
   }
 
   //DELETE
