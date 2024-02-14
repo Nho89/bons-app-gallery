@@ -34,7 +34,7 @@ const Card = ({bonsais}) => {
             <button>Detalles</button>
         <Modal/>
         <Modify/>
-        <Delete/>
+        <Delete id={bonsai.id}/>
         </div>
         
         </div>
