@@ -3,15 +3,14 @@ import {deleteData} from '../services/bonsaisServe'
 
 const Delete = ({id}) => {
   console.log(id)
-  const handleDelete = () => {
+  const bonsaiDelete = () => {
     deleteData(id)}
   return (
     <>
     <div>
-        <button onClick={handleDelete}>Borrar</button>
+        <button onClick={bonsaiDelete}>Borrar</button>
     </div>
     </>
-  
   )
 }
 
