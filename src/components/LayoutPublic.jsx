@@ -7,9 +7,9 @@ import Footer from './Footer';
 const LayoutPublic = () => {
   return (
     <div>
-        <Nav>soy un nav</Nav>
+        <Nav/>
         <Outlet/>
-        <Footer>soy un footer</Footer>
+        <Footer/>
     </div>
   )
 }
