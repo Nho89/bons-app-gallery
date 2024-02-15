@@ -12,9 +12,9 @@ const router = createBrowserRouter([
       element: <LayoutPublic/>,
       children:[
         {
-          path: "/",
-     element:  <Home/>,
-          loader: getData
+      path: "/",
+      element:  <Home/>,
+      loader: getData
         },
         {
       path:"/create",
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
       element: <Update />,
       }/* ,
       {
-        path: "/card",
-        element: <CardDetail />,
+      path: "/card",
+      element: <CardDetail />,
         
       } */
     ],
