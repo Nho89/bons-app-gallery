@@ -1,6 +1,29 @@
 import React from 'react'
 import Edit from '../../components/Edit'
+import {useForm} from "react-hook-form";
+import {useLoaderData, Link, useNavigate} from 'react-router-dom'
+
+
 const Update = () => {
+     
+  const {bonsais} = useLoaderData();
+
+  const {register, handleSubmit, errors} = useForm({defaultValues:{
+
+    especie:  bonsais.especie,
+    trasplantado: bonsais.trasplantado,
+    abonado: bonsais.abonado,
+    image: bonsais.image,
+
+  }});
+
+  const navigate = useNavigate()
+
+  const handleForm = (updateData) =>{
+    updateData.id = bonsais.id;
+    navigate('/')
+  }
+
   return (
     <>
     <form action="">
