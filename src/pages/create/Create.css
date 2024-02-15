@@ -42,4 +42,5 @@ body {
 .label-form-notas {
     width: 90%;
     height: 30vh;
+    border-radius: 10px;
 }
