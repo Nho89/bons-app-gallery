@@ -2,7 +2,6 @@ import React from 'react'
 import {useForm} from  'react-hook-form'
 import { postData } from '../../services/bonsaisServe'
 import './Create.css'
-import Add from '../../components/Add'
 
 const Create = () => {
   const { handleSubmit, register, errors} = useForm()
@@ -35,9 +34,8 @@ const Create = () => {
 
       <label htmlFor="notas">Notas</label>
       <input className="label-form-notas" type="text" name="notas" id="notas" {...register("notas")} placeholder=""/>
-
+      <button className="boton-form" type='submit'>Enviar</button>
     </form>
-    <Add/>
     </>
   )
 }

@@ -8,16 +8,11 @@ export const getData = async () => {
 
   //POST
 
-  export const postData = async () =>{
-    axios({
-      method:"POST",
-      url:"http://localhost:3000/bonsais",
-    })
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((error)=>console.log(error))
-  }
+  export const postData = async (data) =>{
+  axios.post('http://localhost:3000/bonsais',data)
+  
+  return(data)
+}
 
   //UPDATE
   export  const updateData = async () =>{

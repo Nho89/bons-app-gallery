@@ -29,7 +29,7 @@ body {
     padding-top: 5vh;
     background-color: #044C40;
     border-radius: 20px;
-    width: 100vw;
+    width: 90vw;
 
 }
 
@@ -43,4 +43,10 @@ body {
     width: 90%;
     height: 30vh;
     border-radius: 10px;
+    margin-bottom: 20px;
+}
+.boton-form{
+    margin-bottom: 10px;
+    width: 20%;
+    border-radius: 5px;
 }
