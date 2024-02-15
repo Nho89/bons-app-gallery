@@ -63,29 +63,6 @@
       "trasplantado": "19-3-2020",
       "image": "./src/assets/images/sabina3.png",
       "id": "10"
-    },
-    {
-      "id": "f1ef",
-      "especie": "pepino",
-      "trasplantado": "15-02-23",
-      "abonado": "15-25-25",
-      "image": {
-        "0": {}
-      }
-    },
-    {
-      "id": "5813",
-      "especie": "Arces",
-      "trasplantado": "05-02-2024",
-      "abonado": "18-03-2024",
-      "image": ""
-    },
-    {
-      "id": "d02f",
-      "especie": "Arces",
-      "trasplantado": "05-02-2024",
-      "abonado": "18-03-2024",
-      "image": ""
     }
   ]
 }
