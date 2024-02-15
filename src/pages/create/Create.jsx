@@ -1,36 +1,41 @@
 import React from 'react'
 import {useForm} from  'react-hook-form'
-/* import {useHistory, useNavigate} from 'react-router-dom'*/
-import axios from 'axios'
 import { postData } from '../../services/bonsaisServe'
 import './Create.css'
 import Add from '../../components/Add'
 
 const Create = () => {
-      const { register, handleSubmit, reset } = useForm()
-      const onSubmit = async (data) =>{
-        
-      }  
+  const { handleSubmit, register, errors} = useForm()
+
+  const bonsais = (data) =>{
+    postData(data)
+  }
 
 // const mockup =`http://localhost:3000/${bonsais}`
+
   return (
     <>
 
     <h1 className='title-bonsais'>Añadir Bonsai</h1>
     {/* <img src={mockup} alt="Mockup de los bonsais que va a subir el usuario" />  */}
-    <div>
-      <input type="file" style={{color: "transparent"}} id="image" required/><br/>
-    </div>
-    
-    <form className='container-form'>
+   
+    <form className='container-form' onSubmit={handleSubmit(bonsais)}>
+
+      <label htmlFor="image"><img src="" alt="" />Añade la imagen de tu Bonsai</label>
+      <input type="file" {...register("image")} /> <br />
+
       <label htmlFor="especie">Especie </label>
-      <input className="label-form" type="text" name="especie" required/><br/>
-      <label htmlFor="date-trasp">Trasplantado </label>
-      <input className="label-form" type="date" name="date-transp"/><br />
-      <label htmlFor="date-abonado" required>Abonado </label>
-      <input className="label-form" type="date" /><br />
+      <input className="label-form" type='text' {...register("especie", { required: true })} required/><br/>
+
+      <label htmlFor="trasplantado">Trasplantado</label>
+      <input className="label-form" id='trasplantado' {...register("trasplantado", { required: true })} required /><br />
+
+      <label className="label-form" htmlFor="abonado" required>Abonado</label>
+      <input className="label-form" name="abonado" id="abonado" {...register("abonado")} required type="date" /><br />
+
       <label htmlFor="notas">Notas</label>
-      <input className="label-form-notas" type="text" name="notas" placeholder=""/>
+      <input className="label-form-notas" type="text" name="notas" id="notas" {...register("notas")} placeholder=""/>
+
     </form>
     <Add/>
     </>
