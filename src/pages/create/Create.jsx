@@ -13,7 +13,7 @@ const Create = () => {
       <label htmlFor="especie">Especie:</label>
       <input type='text' {...register("especie", { required: true })} required/>
       <label htmlFor="trasplantado">Trasplantado:</label>
-      <input id='trasplantado' {...register("trasplantado", { required: true })} required />
+      <input id='trasplantado' type='date' {...register("trasplantado", { required: true })} required />
       <label htmlFor="abonado">Abono:</label>
       <input name="abonado" id="abonado" {...register("abonado")} required/>
       <label htmlFor="image">Imagen Bonsai:</label>
