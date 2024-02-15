@@ -23,15 +23,14 @@ const router = createBrowserRouter([
       {
       path: "/update",
       element: <Update />,
-      },
+      }/* ,
       {
         path: "/card",
         element: <CardDetail />,
         
-      }
+      } */
     ],
     },
-    
   ],
   );
   export  default router;

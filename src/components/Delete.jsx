@@ -8,7 +8,7 @@ const Delete = ({id}) => {
   return (
     <>
     <div>
-        <button onClick={bonsaiDelete}>Borrar</button>
+        <button style={{padding:"6px"}} onClick={bonsaiDelete}>Borrar</button>
     </div>
     </>
   )

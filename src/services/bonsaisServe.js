@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const getData = async () => {
     const response = await fetch('http://localhost:3000/bonsais');
     const data = await response.json();
@@ -7,7 +9,14 @@ export const getData = async () => {
   //POST
 
   export const postData = async () =>{
-    
+    axios({
+      method:"POST",
+      url:"http://localhost:3000/bonsais",
+    })
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error)=>console.log(error))
   }
 
   //UPDATE

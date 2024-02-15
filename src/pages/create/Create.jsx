@@ -1,14 +1,20 @@
 import React from 'react'
-import { useLoaderData } from 'react-router-dom';
+import {useForm} from  'react-hook-form'
+/* import {useHistory, useNavigate} from 'react-router-dom'
+ */import axios from 'axios'
+import { postData } from '../../services/bonsaisServe'
 
 const Create = () => {
-      
+      const { register, handleSubmit, reset } = useForm()
+      const onSubmit = async (data) =>{
+        
+      }  
   return (
     <>
     <form>
 
         <label htmlFor="image">Foto:  </label><br />
-        <div style={{}}>
+        <div >
           <input type="file" style={{color: "transparent"}} id="image"  required/><br/>
         </div>
         <label htmlFor="especie">Especie:  </label>
