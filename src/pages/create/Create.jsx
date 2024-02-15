@@ -21,7 +21,7 @@ const Create = () => {
    
     <form className='container-form' onSubmit={handleSubmit(bonsais)}>
 
-      <label htmlFor="image"><img src="" alt="" />Añade la imagen de tu Bonsai</label>
+      <label htmlFor="image">Añade la imagen de tu Bonsai<img src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="" /></label>
       <input type="file" {...register("image")} /> <br />
 
       <label htmlFor="especie">Especie </label>
