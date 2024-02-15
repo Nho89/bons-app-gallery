@@ -5,7 +5,7 @@ const Modify = () => {
     const navigate = useNavigate()
 
     const onClick = () => {
-        navigate('/update')
+        navigate('/update/${bonsais.id}')
     }
 
   return (

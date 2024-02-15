@@ -10,6 +10,7 @@ const Home = () => {
     <>
     <h1 className='title-bonsais'>Mis  Bonsáis : </h1>
     <div style={{textAlign:"center", minHeight:"100vh"}}>
+      //<button classname="actualizar"onClick ></button>
       <Card bonsais={bonsais}/>
       </div>
     </>

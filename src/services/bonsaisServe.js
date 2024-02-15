@@ -20,11 +20,27 @@ export const getData = async () => {
     .catch((error)=>console.log(error))
   }
 
-  //UPDATE
-  export  const updateData = async (id) =>{
-    if (onclick===true)
-    await fetch (`http://localhost:3000/bonsais/${id}`,{method:"UPDATE"})
-  }
+  //PUT
+  export const updateData = async (id, newData) => {
+    try {
+      const response = await fetch(`http://localhost:3000/bonsais/${id}`, {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newData) // Convertir los datos a formato JSON
+      });
+  
+      if (response.ok) {
+        console.log("Bonsái actualizado correctamente");
+      } else {
+        console.error("Error al actualizar el bonsái:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error al realizar la solicitud:", error);
+     }
+  };
+
 
   //DELETE
   export const deleteData = async (id) =>{
