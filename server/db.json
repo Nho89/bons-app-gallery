@@ -65,6 +65,7 @@
       "id": "10"
     },
     {
+<<<<<<< HEAD
       "id": "19d5",
       "especie": "sd",
       "trasplantado": "ddd",
@@ -95,6 +96,24 @@
       "trasplantado": "05-02-2024",
       "abonado": "18-03-2024",
       "image": ""
+=======
+      "id": "e566",
+      "image": {
+        "0": {}
+      },
+      "specie": "BEA",
+      "trasplantDate": "2024-03-16",
+      "fertilizateDate": "2024-02-02"
+    },
+    {
+      "id": "1448",
+      "image": {
+        "0": {}
+      },
+      "specie": "Lola",
+      "trasplantDate": "2024-02-02",
+      "fertilizateDate": "2024-02-29"
+>>>>>>> 6721fac595a7d4fdad423dd5db7af3e5f4a92956
     }
   ]
 }
