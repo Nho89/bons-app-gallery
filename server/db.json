@@ -63,6 +63,24 @@
       "trasplantado": "19-3-2020",
       "image": "./src/assets/images/sabina3.png",
       "id": "10"
+    },
+    {
+      "id": "e566",
+      "image": {
+        "0": {}
+      },
+      "specie": "BEA",
+      "trasplantDate": "2024-03-16",
+      "fertilizateDate": "2024-02-02"
+    },
+    {
+      "id": "1448",
+      "image": {
+        "0": {}
+      },
+      "specie": "Lola",
+      "trasplantDate": "2024-02-02",
+      "fertilizateDate": "2024-02-29"
     }
   ]
 }

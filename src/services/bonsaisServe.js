@@ -10,17 +10,18 @@ export const getData = async () => {
 
   //POST
 
-  export const postData = async () =>{
-    axios({
-      method:"POST",
-      url:"http://localhost:3000/bonsais",
-    })
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((error)=>console.log(error))
+  export const postData = async (newBonsai) => {
+      const response = await fetch('http://localhost:3000/bonsais', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newBonsai)
+      
+    });
   }
-
+      
+    
   //UPDATE
   export  const updateData = async () =>{
   }
