@@ -11,19 +11,24 @@ const Create = () => {
       }  
   return (
     <>
-    <form>
-
+    <form onSubmit={handleSubmit}>
+  
+        {/*Imagen*/}
         <label htmlFor="image">Foto:  </label><br />
         <div >
-          <input type="file" style={{color: "transparent"}} id="image"  required/><br/>
+          <input type="file" style={{color: 'transparent'}} id="image"  required {...register("image")}/><br/>
         </div>
+        {/*Especie*/}
         <label htmlFor="especie">Especie:  </label>
-        <input type="text" name="especie" required/><br/>
+        <input type="text" name="especie" {...register('specie')} required/><br/>
+        {/*Fecha de Trasplantado*/}
         <label htmlFor="date-trasp">Trasplantado: </label>
-        <input type="date" name="date-transp"/><br />
+        <input type="date" name="date-transp" {...register('trasplantDate')}/><br />
+        {/*Fecha de Abonado*/}
         <label htmlFor="date-abonado" required>Abonado: </label>
-        <input type="date" /><br />
-        <button type='submit' >Enviar</button>
+        <input type="date" {...register('fertilizateDate')}/><br />
+        {/*botón añadir*/}
+        <button type='submit' >Añadir</button>
     </form>
     </>
   )
