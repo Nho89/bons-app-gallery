@@ -27,7 +27,7 @@ const Create = () => {
       <input className="label-form" type='text' {...register("especie", { required: true })} required/><br/>
 
       <label htmlFor="trasplantado">Trasplantado</label>
-      <input className="label-form" id='trasplantado' {...register("trasplantado", { required: true })} required /><br />
+      <input className="label-form" type="date" id='trasplantado' {...register("trasplantado", { required: true })} required /><br />
 
       <label className="label-form" htmlFor="abonado" required>Abonado</label>
       <input className="label-form" name="abonado" id="abonado" {...register("abonado")} required type="date" /><br />
