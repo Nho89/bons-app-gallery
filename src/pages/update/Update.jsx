@@ -6,7 +6,7 @@ import { getData } from '../../services/bonsaisServe';
 import { useParams } from 'react-router-dom';
 //import { useLoaderData } from 'react-router-dom';
 
-const RegisterForm = () => {
+const Update = () => {
 const {id} = useParams();
 const { register, handleSubmit, formState: {errors} } = useForm()
 
@@ -21,19 +21,26 @@ const onSubmit = async (formData) => {
 };
   return (
     <>
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className= 'container-form'onSubmit={handleSubmit(onSubmit)}>
+    <h1 className='title-bonsais'>Modificar Bonsai</h1>
+
+    <div>
+      <input type="file" style={{color: "transparent"}} id="image" required/><br/>
+    </div>
+    
       <label htmlFor="especie">Especie:</label>
       <input type="text" id="especie" {...register('especie',{required:'Este campo es obligatorio'})}/><br/>
       <label htmlFor="trasplantado">Trasplantado:</label>
-      <input type="date" id="trasplantado" {...register('trasplando',{required:'Este campo es obligatorio'})}/><br/>
+      <input type="date" id="trasplantado" {...register('trasplando',)}/><br/>
       <label htmlFor="abonado">Abonado:</label>
-      <input type="date" id="abonado"{...register('abonado',{required:'Este campo es obligatorio'})}/><br/>
-{errors.especie && <p>Introduce una especie{errors.especie.message}</p>}
-//botón de envío
-<button type="submit">Actualizar</button>
+      <input type="date" id="abonado"{...register('abonado',)}/><br/>
+      <label htmlFor="notas">Notas</label>
+      <input className="label-form-notas" id="notas"{...register('notas',)} type="text" name="notas" placeholder=""/>
+{errors.especie && <p>{errors.especie.message}</p>}
+<button className="boton-form" type='submit'>Enviar</button>
 </form>
 </>
   );
 };
   
-export default RegisterForm
+export default Update
