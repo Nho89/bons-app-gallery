@@ -18,8 +18,8 @@ export const getData = async () => {
 }
 
   //UPDATE
-  export  const updateData = async (data) =>{
-    const bonsais = await axios.put('http://localhost:3000/bonsais', data)
+  export  const updateData = async (id, data) =>{
+    const bonsais = await axios.put(`http://localhost:3000/bonsais/${id}`, data)
     return bonsais
   }
 
