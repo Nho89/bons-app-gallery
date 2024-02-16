@@ -1,37 +1,27 @@
 import React from 'react'
 import {useForm} from  'react-hook-form'
-/* import {useHistory, useNavigate} from 'react-router-dom'
- */import axios from 'axios'
 import { postData } from '../../services/bonsaisServe'
 
 const Create = () => {
-      const { register, handleSubmit, reset } = useForm()
-      const onSubmit = async (data) =>{
-        
-      }  
-  return (
-    <>
-    <form onSubmit={handleSubmit}>
-  
-        {/*Imagen*/}
-        <label htmlFor="image">Foto:  </label><br />
-        <div >
-          <input type="file" style={{color: 'transparent'}} id="image"  required {...register("image")}/><br/>
-        </div>
-        {/*Especie*/}
-        <label htmlFor="especie">Especie:  </label>
-        <input type="text" name="especie" {...register('specie')} required/><br/>
-        {/*Fecha de Trasplantado*/}
-        <label htmlFor="date-trasp">Trasplantado: </label>
-        <input type="date" name="date-transp" {...register('trasplantDate')}/><br />
-        {/*Fecha de Abonado*/}
-        <label htmlFor="date-abonado" required>Abonado: </label>
-        <input type="date" {...register('fertilizateDate')}/><br />
-        {/*botón añadir*/}
-        <button type='submit' >Añadir</button>
+  const { handleSubmit, register, errors} = useForm()
+
+    const bonsais = (data) =>{
+      postData(data)
+    }
+      return (
+    <form  onSubmit={handleSubmit(bonsais)}>
+      <label htmlFor="especie">Especie:</label>
+      <input type='text' {...register("especie", { required: true })} required/>
+      <label htmlFor="trasplantado">Trasplantado:</label>
+      <input id='trasplantado' type='date' {...register("trasplantado", { required: true })} required />
+      <label htmlFor="abonado">Abono:</label>
+      <input name="abonado" id="abonado" {...register("abonado")} required/>
+      <label htmlFor="image">Imagen Bonsai:</label>
+      <input type="file" {...register("image")} />
+      <button type='submit'>Enviar</button>
     </form>
-    </>
-  )
-}
+      )
+    }
+   
 
 export default Create

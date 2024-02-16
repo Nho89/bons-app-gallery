@@ -3,7 +3,7 @@ import Home from "../pages/home/Home";
 import Create from "../pages/create/Create";
 import Update from "../pages/update/Update";
 import LayoutPublic from "../components/LayoutPublic";
-import {deleteData, getData} from '../services/bonsaisServe'
+import {deleteData, getData, updateData} from '../services/bonsaisServe'
 import CardDetail from "../components/CardDetail";
 
 const router = createBrowserRouter([
@@ -23,6 +23,7 @@ const router = createBrowserRouter([
       {
       path: "/update/:id",
       element: <Update />,
+       loader: updateData
       }/* ,
       {
         path: "/card",

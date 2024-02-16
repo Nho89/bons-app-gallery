@@ -20,6 +20,13 @@ export const getData = async () => {
     .catch((error)=>console.log(error))
   }
 
+  export const postData = async (data) =>{
+  const bonsais = await axios.post('http://localhost:3000/bonsais',data)
+  alert("Bonsai creado exitosamente")
+  window.location.reload(); 
+  return bonsais
+}
+
   //PUT
   export const updateData = async (id, newData) => {
     try {
@@ -46,6 +53,6 @@ export const getData = async () => {
   export const deleteData = async (id) =>{
     if(confirm("¿Estás seguro que quieres eliminar este bonsai?") === true)
     await fetch(`http://localhost:3000/bonsais/${id}`,{method:"DELETE"})
-    await getData();
+    
     location.reload();
   }
