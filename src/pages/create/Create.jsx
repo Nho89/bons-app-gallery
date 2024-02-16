@@ -16,8 +16,7 @@ const Create = () => {
     <>
 
     <h1 className='title-bonsais'>Añadir Bonsai</h1>
-    {/* <img src={mockup} alt="Mockup de los bonsais que va a subir el usuario" />  */}
-   
+     
     <form className='container-form' onSubmit={handleSubmit(bonsais)}>
 
       <label htmlFor="image">Añade la imagen de tu Bonsai<img src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="" /></label>
