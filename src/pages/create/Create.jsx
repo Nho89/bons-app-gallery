@@ -35,6 +35,7 @@ const Create = () => {
       <input className="label-form-notas" type="text" name="notas" id="notas" {...register("notas")} placeholder=""/>
       <button className="boton-form" type='submit'>Enviar</button>
     </form>
+    </>
       )
     }
    
