@@ -48,3 +48,10 @@ body {
     width: 20%;
     border-radius: 5px;
 }
+
+span {
+    display: block;
+    color: tomato;
+    font-size: 1rem;
+
+}

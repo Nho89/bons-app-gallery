@@ -4,13 +4,13 @@ import { postData } from '../../services/bonsaisServe'
 import './Create.css'
 
 const Create = () => {
-  const { handleSubmit, register, errors} = useForm()
+  const { handleSubmit, register, 
+    formState: {errors}
+  } = useForm();
 
   const bonsais = (data) =>{
     postData(data)
   }
-
-// const mockup =`http://localhost:3000/${bonsais}`
 
   return (
     <>
@@ -20,19 +20,36 @@ const Create = () => {
     <form className='container-form' onSubmit={handleSubmit(bonsais)}>
 
       <label htmlFor="image">Añade la imagen de tu Bonsai<img src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="" /></label>
-      <input type="file" {...register("image")} /> <br />
+      <input type="file" {...register("image")} />
+    
+      <br />
 
       <label htmlFor="especie">Especie </label>
-      <input className="label-form" type='text' {...register("especie", { required: true })} required/><br/>
-
+      <input className="label-form" type='text' {...register("especie", { required: "La especie es requerida" })}
+      />
+        {errors.especie && <span>{errors.especie.message}</span>}
+    
+      <br/>
       <label htmlFor="trasplantado">Trasplantado</label>
-      <input className="label-form" type="date" id='trasplantado' {...register("trasplantado", { required: true })} required /><br />
+      <input {...register("trasplantado", { required:true })} className="label-form" type="date" id='trasplantado' />
+      {
+      errors.trasplantado && <span> La fecha de trasplantado es requerida </span>
+      }
+      <br />
 
-      <label className="label-form" htmlFor="abonado" required>Abonado</label>
-      <input className="label-form" name="abonado" id="abonado" {...register("abonado")} required type="date" /><br />
+      <label className="label-form" htmlFor="abonado">Abonado</label>
+      <input className="label-form" name="abonado" id="abonado" {...register("abonado", { required:true })} type="date" />
+      {
+      errors.abonado && <span> La fecha de abonado es requerida </span>
+      }
+      <br />
 
       <label htmlFor="notas">Notas</label>
-      <input className="label-form-notas" type="text" name="notas" id="notas" {...register("notas")} placeholder=""/>
+      <input className="label-form-notas" type="text" name="notas" id="notas"  placeholder=""/>
+
+      {
+      errors.notas && <span> La fecha de notas es requerida </span>
+      }
       <button className="boton-form" type='submit'>Enviar</button>
     </form>
     </>
