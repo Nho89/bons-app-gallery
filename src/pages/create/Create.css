@@ -51,7 +51,11 @@ body {
 
 span {
     display: block;
-    color: tomato;
+    color: #F69E92;
     font-size: 1rem;
 
+}
+
+input {
+    border:none;
 }
