@@ -11,9 +11,9 @@ const {id} = useParams();
 const { register, handleSubmit, formState: {errors} } = useForm()
 
 //Función que se ejecuta al enviar el formulario
-const onSubmit = async (formData) => {
+const onSubmit = async (newData) => {
   try {
-    await updateData(id, formData);
+    await updateData(id, newData);
     console.log("Datos actualizados correctamente");
   } catch (error) {
     console.error("Error al actualizar los datos:", error);
@@ -31,12 +31,12 @@ const onSubmit = async (formData) => {
       <label htmlFor="especie">Especie:</label>
       <input type="text" id="especie" {...register('especie',{required:'Este campo es obligatorio'})}/><br/>
       <label htmlFor="trasplantado">Trasplantado:</label>
-      <input type="date" id="trasplantado" {...register('trasplando',)}/><br/>
+      <input type="date" id="trasplantado" {...register('trasplantado')}/><br/>
       <label htmlFor="abonado">Abonado:</label>
-      <input type="date" id="abonado"{...register('abonado',)}/><br/>
+      <input type="date" id="abonado"{...register('abonado')}/><br/>
       <label htmlFor="notas">Notas</label>
-      <input className="label-form-notas" id="notas"{...register('notas',)} type="text" name="notas" placeholder=""/>
-{errors.especie && <p>{errors.especie.message}</p>}
+      <input className="label-form-notas" id="notas"{...register('notas')} type="text" name="notas" placeholder=""/>
+{errors.especie && <p>Introduce una especie{errors.especie.message}</p>}
 <button className="boton-form" type='submit'>Enviar</button>
 </form>
 </>

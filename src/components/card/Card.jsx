@@ -1,12 +1,13 @@
 import React from 'react'
 import Delete from '../Delete'
-import Modify from '../Modify'
 import Modal from '../modal/Modal'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 const Card = ({bonsais}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate()
   return (
    <>
    {
@@ -34,7 +35,7 @@ const Card = ({bonsais}) => {
         </div>
         <div style={{display: "flex", marginTop:"20px", marginBottom:"40px", gap:"10px"}}>
             <button onClick={()=> setIsModalOpen(true)}>Detalles</button>
-        <Modify/>
+            <button classname = "modify" type="button" onClick = {()=>navigate(`/update/${bonsai.id}`)}>Modificar</button>
         <Delete id={bonsai.id}/>
         </div>
                 <Modal isOpen = {isModalOpen} closeModal={()=> setIsModalOpen(false)}/>

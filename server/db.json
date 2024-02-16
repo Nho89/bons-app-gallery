@@ -1,25 +1,17 @@
 {
   "bonsais": [
     {
-      "especie": "Acebuche",
-      "abonado": "5-7-2023",
-      "trasplantado": "2-5-2023",
-      "image": "./src/assets/images/Acebuche2.png",
-      "id": "2",
-      "text": "esto es un texto de prueba"
-    },
-    {
-      "especie": "Arces",
-      "abonado": "5-2-2024",
-      "trasplantado": "18-6-2020",
-      "image": "./src/assets/images/bosque-arces.png",
+      "especie": "pino",
+      "trasplantado": "2024-02-23",
+      "abonado": "2024-02-23",
+      "notas": "sda",
       "id": "3"
     },
     {
-      "especie": "Chaenomeles",
-      "abonado": "5-6-2023",
-      "trasplantado": "5-4-2023",
-      "image": "./src/assets/images/chaenomeles.png",
+      "especie": "Arce",
+      "trasplando": "2024-03-06",
+      "abonado": "2024-03-08",
+      "notas": "test viernes",
       "id": "4"
     },
     {

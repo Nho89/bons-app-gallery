@@ -27,11 +27,6 @@ export const getData = async () => {
         body: JSON.stringify(newData) // Convertir los datos a formato JSON
       });
   
-      if (response.ok) {
-        console.log("Bonsái actualizado correctamente");
-      } else {
-        console.error("Error al actualizar el bonsái:", response.statusText);
-      }
     } catch (error) {
       console.error("Error al realizar la solicitud:", error);
      }
