@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'; //convierte info de un form en un obj
 import { updateData } from '../../services/bonsaisServe';
 import { getData } from '../../services/bonsaisServe';
 import { useParams } from 'react-router-dom';
+//import { useLoaderData } from 'react-router-dom';
 
 const RegisterForm = () => {
 const {id} = useParams();
