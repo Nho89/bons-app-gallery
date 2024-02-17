@@ -28,17 +28,17 @@ const Card = ({bonsais}) => {
         <p>Abonado</p>  
         </div>
         
-        <div className='dates-card-box' style={{display:"flex", gap:"20px", alignItems:"center"}} >
-            <div style={{backgroundColor:"#F6F0BE",borderRadius:"20px", width:"180px"}}>
+        <div className='dates-card-input' >
+            <div className='date-text'>
                 <p>{bonsai.trasplantado}</p>
             </div>
-            <div style={{backgroundColor:"#F6F0BE",borderRadius:"20px", width:"180px"}}>
+            <div className='date-text'>
                 <p>{bonsai.abonado}</p>
             </div>
         </div>
 
         <div style={{display: "flex", marginTop:"20px", marginBottom:"40px", gap:"10px"}}>
-            <button onClick={()=> setIsModalOpen(true)}>Detalles</button>
+            <button style={{width: "25vw", backgroundColor:"#F69E92", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)"  }}  onClick={()=> setIsModalOpen(true)}>Detalles</button>
         <Modify/>
         <Delete id={bonsai.id}/>
         </div>

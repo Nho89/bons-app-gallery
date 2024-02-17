@@ -45,7 +45,7 @@ body {
     height: 90%;
     background-color: #044C40;
     border-radius: 20px;
-    padding-top: 10%;
+    padding-top: 5%;
     /* height: 400px */
 }
 
@@ -58,9 +58,18 @@ body {
     display: flex;
     gap: 100px;
     color: #F6F0BE;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
-.dates-card-box {
-    
+.dates-card-input {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.date-text {
+    background-color: #F6F0BE;
+    border-radius: 20px;
+    width: 35vw;
+    font-size: 1.1rem;
 }
