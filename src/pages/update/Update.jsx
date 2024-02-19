@@ -3,11 +3,12 @@ import React from 'react';
 import { useForm } from 'react-hook-form'; //convierte info de un form en un objeto
 import { updateData } from '../../services/bonsaisServe';
 import { getData } from '../../services/bonsaisServe';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 //import { useLoaderData } from 'react-router-dom';
 
 const Update = () => {
 const {id} = useParams();
+const navigate = useNavigate();
 const { register, handleSubmit, formState: {errors} } = useForm()
 
 //Función que se ejecuta al enviar el formulario
@@ -15,6 +16,7 @@ const onSubmit = async (newData) => {
   try {
     await updateData(id, newData);
     console.log("Datos actualizados correctamente");
+    navigate('/');
   } catch (error) {
     console.error("Error al actualizar los datos:", error);
   }
@@ -37,7 +39,7 @@ const onSubmit = async (newData) => {
       <label htmlFor="notas">Notas</label>
       <input className="label-form-notas" id="notas"{...register('notas')} type="text" name="notas" placeholder=""/>
 {errors.especie && <p>Introduce una especie{errors.especie.message}</p>}
-<button className="boton-form" type='submit'>Enviar</button>
+<button className="boton-form" type='submit' onClick={handleSubmit(onSubmit)}>Enviar</button>
 </form>
 </>
   );
