@@ -40,3 +40,9 @@ export const getData = async () => {
     
     window.location.reload();
   }
+
+  export const getBonsaiById = async (id) => {
+  const response = await fetch(`http://localhost:3000/bonsais/${id}`);
+  const data = await response.json();
+  return data;
+};

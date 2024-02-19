@@ -37,10 +37,10 @@ const Card = ({bonsais}) => {
         </div>
         <div style={{display: "flex", marginTop:"20px", marginBottom:"40px", gap:"10px"}}>
          <button style={{width: "25vw", backgroundColor:"#F69E92", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)"  }} onClick={()=> setIsModalOpen(true)}>Detalles</button>
-         <button style={{width: "25vw", backgroundColor:"#F4DC5E", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)" }} classname = "modify" type="button" onClick = {()=>navigate(`/update/${bonsai.id}`)}>Modificar</button>
+         <button style={{width: "25vw", backgroundColor:"#F4DC5E", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)" }} className = "modify" type="button" onClick = {()=>navigate(`/update/${bonsai.id}`)}>Modificar</button>
         <Delete id={bonsai.id}/>
         </div>
-        <Modal /* notas={bonsai.notas} */ isOpen = {isModalOpen} closeModal={()=> setIsModalOpen(false)} notas={bonsai.notas}/>
+        <Modal isOpen = {isModalOpen} closeModal={()=> setIsModalOpen(false)} notas={bonsai.notas}/>
 
         </div>
 
