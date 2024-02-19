@@ -15,7 +15,16 @@ export const getData = async () => {
   window.location.reload(); 
   return bonsais
 }
-
+//GET para introducir datos en el formulario de editar
+export const getItemById = async (id) => {
+  try {
+    const response = await fetch(`http://localhost:3000/bonsais/${id}`);
+    const data = await response.json();
+    return data
+  } catch (error) {
+    console.error('Error al alcanzar los bonsáis:', error);
+  }
+};
   //PUT
   export const updateData = async (id, newData) => {
     try {
@@ -32,6 +41,17 @@ export const getData = async () => {
      }
   };
 
+  
+// Exportar bonsaiData
+export const getBonsaiData = async (id) => {
+  try {
+    const response = await fetch(`http://localhost:3000/bonsais/${id}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error al alcanzar los bonsáis:', error);
+  }
+};
 
   //DELETE
   export const deleteData = async (id) =>{
