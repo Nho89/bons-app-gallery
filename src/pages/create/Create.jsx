@@ -1,12 +1,16 @@
 import React from 'react'
 import {useForm} from  'react-hook-form'
 import { postData } from '../../services/bonsaisServe'
+import {useNavigate} from 'react-router-dom'
 
 const Create = () => {
+  const navigate = useNavigate()
   const { handleSubmit, register, errors} = useForm()
 
     const bonsais = (data) =>{
       postData(data)
+      
+      navigate('/')
     }
       return (
     <form  onSubmit={handleSubmit(bonsais)}>

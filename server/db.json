@@ -1,10 +1,18 @@
 {
   "bonsais": [
     {
-      "id": "2"
+      "especie": "Acebuche",
+      "abonado": "1-2-2023",
+      "trasplantado": "18-4-2020",
+      "image": "./src/assets/images/acebuche.png",
+      "id": "1"
     },
     {
-      "id": "3"
+      "especie": "Acebuche",
+      "abonado": "5-7-2023",
+      "trasplantado": "2-5-2023",
+      "image": "./src/assets/images/Acebuche2.png",
+      "id": "2"
     },
     {
       "especie": "Chaenomeles",
