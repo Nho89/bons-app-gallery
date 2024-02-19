@@ -2,7 +2,7 @@ import React from 'react'
 import {AiOutlineClose} from "react-icons/ai"
 import './Modal.css'
 
-const Modal = ({isOpen, closeModal}) => {
+const Modal = ({isOpen, closeModal, notas}) => {
   if (!isOpen) return null;
   return (
       <div className='modal'><AiOutlineClose
@@ -14,7 +14,7 @@ const Modal = ({isOpen, closeModal}) => {
         <div className="container">
           <h3>Detalles de la planta:</h3><br />
           
-          <p>Texto</p>
+          <p>{notas}</p>
         </div>
       </div>
   )}

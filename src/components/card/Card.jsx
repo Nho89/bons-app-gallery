@@ -9,9 +9,6 @@ const Card = ({bonsais}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
-  const handleEditClick = (id) => {
-     navigate(`/update/${id}`);
-  };
   return (
    <>
    {
@@ -39,11 +36,10 @@ const Card = ({bonsais}) => {
         </div>
         <div style={{display: "flex", marginTop:"20px", marginBottom:"40px", gap:"10px"}}>
          <button onClick={()=> setIsModalOpen(true)}>Detalles</button>
-        {/* <Modify id={bonsai.id}/> */}
-         <button onClick={() => handleEditClick(bonsai.id, bonsai)}>Editar</button>
+         <button classname = "modify" type="button" onClick = {()=>navigate(`/update/${bonsai.id}`)}>Modificar</button>
         <Delete id={bonsai.id}/>
         </div>
-                <Modal isOpen = {isModalOpen} closeModal={()=> setIsModalOpen(false)}/>
+        <Modal /* notas={bonsai.notas} */ isOpen = {isModalOpen} closeModal={()=> setIsModalOpen(false)} notas={bonsai.notas}/>
 
         </div>
 
