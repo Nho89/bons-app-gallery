@@ -2,7 +2,6 @@ import React from 'react'
 import Delete from '../Delete'
 import Modal from '../modal/Modal'
 import { useState } from 'react'
-import { updateData } from '../../services/bonsaisServe'
 import { useNavigate } from 'react-router-dom'
 
 
