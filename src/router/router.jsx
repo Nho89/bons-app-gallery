@@ -4,7 +4,6 @@ import Create from "../pages/create/Create";
 import Update from "../pages/update/Update";
 import LayoutPublic from "../components/LayoutPublic";
 import {deleteData, getData, updateData} from '../services/bonsaisServe'
-import CardDetail from "../components/CardDetail";
 
 const router = createBrowserRouter([
     {

@@ -1,18 +1,9 @@
 {
   "bonsais": [
     {
-      "especie": "Acebuche",
-      "abonado": "5-7-2023",
-      "trasplantado": "2-5-2023",
-      "image": "./src/assets/images/Acebuche2.png",
-      "id": "2",
-      "text": "esto es un texto de prueba"
+      "id": "2"
     },
     {
-      "especie": "Arces",
-      "abonado": "5-2-2024",
-      "trasplantado": "18-6-2020",
-      "image": "./src/assets/images/bosque-arces.png",
       "id": "3"
     },
     {
