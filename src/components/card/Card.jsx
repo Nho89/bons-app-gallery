@@ -1,6 +1,7 @@
 import React from 'react'
 import Delete from '../Delete'
 import Modal from '../modal/Modal'
+import './Card.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -14,29 +15,29 @@ const Card = ({bonsais}) => {
    {
       bonsais.map(bonsai =>{
         return(
-      <div key={bonsai.id} className='Card-bons' style={{textAlign:"center", /* height:"100vh", */width:"100%", display:"flex", alignItems:"center", justifyContent:"end", flexDirection:"column", gap:"20px"}}>
+      <div key={bonsai.id} className='card-bonsai-container'>
       
-        <div style={{width: "70%", display:"flex", flexWrap:"wrap", marginTop:"20%"}}><img src={bonsai.image} alt="" style={{maxWidth:"100%", textAlign:"center"}}/>
-        </div>
+        
       
-        <div style={{display: "flex", flexDirection:"column",alignItems:"center" ,justifyContent:"center",width:"98%",backgroundColor:"#044C40",  borderRadius:"20px"/* , height:"400px" */}}>
-        <h3 style={{color:"#F6F0BE", fontSize:"3em"}}>{bonsai.especie}</h3>
-        <div style={{display:"flex", gap:"100px", color:"#F6F0BE", fontSize:"1em"}}>
+        <div className= 'card-box-turquoise' >
+          <img className='image-bonsai' src={bonsai.image} alt="La imagen del bonsai que sube el usuario" ></img>
+        <h3 className='title-card-box' >{bonsai.especie}</h3>
+        <div className='card-text' >
         <p>Trasplantado</p>
         <p>Abonado</p>  
         </div>
         
-        <div style={{display:"flex", gap:"20px", alignItems:"center"}} >
-            <div style={{backgroundColor:"#F6F0BE",borderRadius:"20px", width:"180px"}}>
+        <div className='dates-card-input' >
+            <div  className='date-text' >
                 <p>{bonsai.trasplantado}</p>
             </div>
-            <div style={{backgroundColor:"#F6F0BE",borderRadius:"20px", width:"180px"}}>
+            <div className='date-text' >
                 <p>{bonsai.abonado}</p>
             </div>
         </div>
         <div style={{display: "flex", marginTop:"20px", marginBottom:"40px", gap:"10px"}}>
-         <button onClick={()=> setIsModalOpen(true)}>Detalles</button>
-         <button classname = "modify" type="button" onClick = {()=>navigate(`/update/${bonsai.id}`)}>Modificar</button>
+         <button style={{width: "25vw", backgroundColor:"#F69E92", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)"  }} onClick={()=> setIsModalOpen(true)}>Detalles</button>
+         <button style={{width: "25vw", backgroundColor:"#F4DC5E", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)" }} classname = "modify" type="button" onClick = {()=>navigate(`/update/${bonsai.id}`)}>Modificar</button>
         <Delete id={bonsai.id}/>
         </div>
         <Modal /* notas={bonsai.notas} */ isOpen = {isModalOpen} closeModal={()=> setIsModalOpen(false)} notas={bonsai.notas}/>
