@@ -31,6 +31,9 @@ const Update = () => {
 // Definición de la función onSubmit para manejar el envío del formulario
 const onSubmit = async (formData) => {
   try {
+    await updateData(id, newData);
+    console.log("Datos actualizados correctamente");
+    navigate('/');
     setLoading(true);
     // Lógica para enviar los datos actualizados del formulario al servidor
     await updateData(id, formData);
