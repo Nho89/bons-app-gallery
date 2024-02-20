@@ -25,16 +25,14 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    padding-left: 8vw;
-    padding-top: 5vh;
     background-color: #044C40;
-    border-radius: 20px;
-    width: 100vw;
+    border-radius: 20px 20px 0 0 ;
+    width: 100%;
 
 }
 
 .label-form {
-    height: 6vh;
+    height: 5vh;
     border-radius: 10px;
     width: 90%;
 }

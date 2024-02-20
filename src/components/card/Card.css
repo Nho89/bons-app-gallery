@@ -10,7 +10,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     flex-direction: column;
     gap: 20px;
     font-family: 'Poppins', system-ui;
@@ -37,7 +37,8 @@ body {
 .card-text{
     display: flex;
     justify-content: center;
-    gap: 90%;
+    gap: 40%;
+    text-align: left;
     margin-left: 0;
     color: #F6F0BE;
     font-size: 1.2rem;
