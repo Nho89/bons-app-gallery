@@ -1,15 +1,31 @@
 import React from 'react';
 import './Update.css';
 import { useForm } from 'react-hook-form'; //convierte info de un form en un objeto
-import { updateData } from '../../services/bonsaisServe';
-import { getData } from '../../services/bonsaisServe';
+import { updateData, getBonsaiById } from '../../services/bonsaisServe';
 import { useParams, useNavigate } from 'react-router-dom';
-//import { useLoaderData } from 'react-router-dom';
+import {useEffect, useState} from 'react';
+
 
 const Update = () => {
-const {id} = useParams();
-const navigate = useNavigate();
-const { register, handleSubmit, formState: {errors} } = useForm()
+ 
+  const [bonsai, setBonsai] = useState() 
+  const {id} = useParams();
+  const navigate = useNavigate();
+  const { register, handleSubmit, formState: {errors} } = useForm()
+
+  useEffect(() => {
+    const fetchData = async() =>{
+    console.log(id);
+    const bonsaiData = await getBonsaiById(id)
+    console.log(bonsaiData);
+    setBonsai(bonsaiData)
+    
+    }
+    fetchData()
+    
+  },[id])
+  console.log(bonsai);
+
 
 //Función que se ejecuta al enviar el formulario
 const onSubmit = async (newData) => {
@@ -24,7 +40,7 @@ const onSubmit = async (newData) => {
   return (
     <>
     <form className= 'container-form'onSubmit={handleSubmit(onSubmit)}>
-    <h1 className='title-bonsais'>Modificar Bonsai</h1>
+    <h1 className='title-bonsais'>Modificar mi bonsái</h1>
 
     <div>
       <input type="file" style={{color: "transparent"}} id="image" required/><br/>
