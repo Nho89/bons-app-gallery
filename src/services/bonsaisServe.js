@@ -39,7 +39,7 @@ export const getData = async () => {
     
     window.location.reload();
   }
-
+// GET one
   export const getBonsaiById = async (id) => {
   const response = await fetch(`http://localhost:3000/bonsais/${id}`);
   const data = await response.json();

@@ -3,8 +3,7 @@ import Home from "../pages/home/Home";
 import Create from "../pages/create/Create";
 import Update from "../pages/update/Update";
 import LayoutPublic from "../components/LayoutPublic";
-import { getData } from '../services/bonsaisServe';
-
+import { getData, getBonsaiById } from '../services/bonsaisServe';
 const router = createBrowserRouter([
     {
       path: "/",
@@ -22,7 +21,6 @@ const router = createBrowserRouter([
       {
       path: "/update/:id",
       element: <Update />,
-       //loader: updateData
       }
     ],
     },

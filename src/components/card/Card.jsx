@@ -8,12 +8,8 @@ import { useNavigate } from 'react-router-dom'
 
 const Card = ({bonsais}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-<<<<<<< HEAD
-  const navigate = useNavigate()
-=======
   const navigate = useNavigate();
 
->>>>>>> feature-home
   return (
    <>
    {
