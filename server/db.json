@@ -1,11 +1,10 @@
 {
   "bonsais": [
     {
-      "especie": "Acebuche",
-      "abonado": "2023-02-01",
+      "especie": "",
       "trasplantado": "2020-04-18",
-      "image": "./src/assets/images/acebuche.png",
-      "notas": "El bonsái Acebuche, también conocido como olivo silvestre, es apreciado por su corteza retorcida y hojas pequeñas y verde grisáceas. ",
+      "abonado": "2023-02-01",
+      "notas": "",
       "id": "1"
     },
     {
