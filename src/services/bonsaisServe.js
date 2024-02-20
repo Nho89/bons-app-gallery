@@ -27,3 +27,16 @@ export const getData = async () => {
     await getData();
     location.reload();
   }
+
+
+  // //POST IMAGE CLOUDINARY
+  // export const uploadImage = async () =>{
+  //   const response = await axios.post(
+  //     "https://api.cloudinary.com/v1_1/dputvv9bi/image/upload", 
+  //     data)
+  // }
+  
+  // const response = await axios.post(
+  //   "https://api.cloudinary.com/v1_1/dputvv9bi/image/upload", 
+  //   data
+  // );

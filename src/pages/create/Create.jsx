@@ -1,32 +1,60 @@
-import React from 'react'
-import {useForm} from  'react-hook-form'
-import { postData } from '../../services/bonsaisServe'
+import React, { useState } from 'react'
+// import { useForm } from  'react-hook-form'
+// import { postData} from '../../services/bonsaisServe'
+import axios from "axios";
 import './Create.css'
 
-const Create = () => {
-  const { handleSubmit, register, 
-    formState: {errors}
-  } = useForm();
 
-  const bonsais = (data) =>{
-    postData(data)
-  }
+const Create = () => {
+  const {Url_Imagen, setUrl_Imagen } = useState("");
+  // const { handleSubmit, register, 
+  //   formState: {errors}
+  // } = useForm();
+
+  // const bonsais = (data) =>{
+  //   postData(data)
+  // }
+
+  const changeUploadImage = async (e) => {
+    const file = e.target.files[0];
+
+    const data = new FormData(); 
+
+    data.append("file", file);
+    // data.append("upload_preset","preset_bonsai");
+
+    const response = await axios.post(
+      "https://api.cloudinary.com/v1_1/dputvv9bi/image/upload", 
+      data
+      );
+      console.log(response.data);
+
+  // setUrl_Imagen(response.data.secure_url);
+
+};
 
   return (
     <>
 
     <h1 className='title-bonsais'>Añadir Bonsai</h1>
      
-    <form className='container-form' onSubmit={handleSubmit(bonsais)}>
+    <form className='container-form'>
 
-      <label htmlFor="image">Añade la imagen de tu Bonsai<img src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="" /></label>
-      <input type="file" {...register("image", {required:true})} />
-      {
+      <label htmlFor="image">Añade la imagen de tu Bonsai</label>
+      <input type="file"  accept="image/*" onChange={changeUploadImage} />
+
+      {Url_Imagen && (
+        <div>
+        <img src={"Url_Imagen"}  alt="Imagen de mi bonsai" />
+        </div>)
+      }
+      
+      {/* {
         errors.image && <span>Imagen requerida</span>
       }
     
-      <br />
-
+      <br /> */}
+{/* 
       <label htmlFor="especie">Especie </label>
       <input className="label-form" type='text' {...register("especie", { required: "La especie es requerida" })}
       />
@@ -53,7 +81,7 @@ const Create = () => {
       {
       errors.notas && <span> La fecha de notas es requerida </span>
       }
-      <button className="boton-form" type='submit'>Enviar</button>
+      <button className="boton-form" type='submit'>Enviar</button> */}
     </form>
     </>
       )
