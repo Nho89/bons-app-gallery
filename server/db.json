@@ -71,16 +71,6 @@
       "image": "./src/assets/images/sabina3.png",
       "notas": "hola",
       "id": "10"
-    },
-    {
-      "id": "627c",
-      "image": {
-        "0": {}
-      },
-      "especie": "Arbolito",
-      "trasplantado": "2024-02-16",
-      "abonado": "2024-02-16",
-      "notas": "Holaaa"
     }
   ]
 }
