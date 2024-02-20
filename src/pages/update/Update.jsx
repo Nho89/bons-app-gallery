@@ -48,11 +48,14 @@ const Update = () => {
         <h1 className='title-bonsais'>Modificar mi bonsái</h1>
         {/* Campos del formulario */}
         <label htmlFor='especie'>Especie:</label>
-        <input type='text' id='especie' {...register('especie', { required: 'Este campo es obligatorio' })} /><br />
+        <input type='text' className="label-form" id='especie' {...register('especie', { required: 'Este campo es obligatorio' })} /><br />
+        
         <label htmlFor='trasplantado'>Trasplantado:</label>
-        <input type='date' id='trasplantado' {...register('trasplantado')} /><br />
+        <input type='date' className="label-form" id='trasplantado' {...register('trasplantado')} /><br />
+        
         <label htmlFor='abonado'>Abonado:</label>
-        <input type='date' id='abonado' {...register('abonado')} /><br />
+        <input type='date' className="label-form" id='abonado' {...register('abonado')} /><br />
+        
         <label htmlFor='notas'>Notas</label>
         <input className='label-form-notas' id='notas' {...register('notas')} type='text' name='notas' placeholder='' />
         {errors.especie && <p>Introduce una especie{errors.especie.message}</p>}

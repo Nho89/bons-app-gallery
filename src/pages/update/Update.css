@@ -39,5 +39,12 @@ body {
 
 .label-form-notas {
     width: 90%;
-    height: 30vh;
+    height: 20vh;
+    box-sizing: border-box;
+    text-align: justify;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: auto;
+    margin-top: auto;
 }
