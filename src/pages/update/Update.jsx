@@ -48,20 +48,20 @@ const Update = () => {
         <h1 className='title-bonsais'>Modificar mi bonsái</h1>
         {/* Campos del formulario */}
         <label htmlFor='especie'>Especie:</label>
-        <input type='text' className="label-form" id='especie' {...register('especie', { required: 'gsfd' })} /><br />
+        <input type='text' className="label-form" id='especie' {...register('especie', { required: 'La especie es requerida' })} /><br />
         {errors.especie && <span className='span-error'>{errors.especie.message}</span>}
 
         <label htmlFor='trasplantado'>Trasplantado:</label>
-        <input type='date' className="label-form" id='trasplantado' {...register('trasplantado', { required: '' })} /><br />
+        <input type='date' className="label-form" id='trasplantado' {...register('trasplantado', { required: true })} /><br />
         {errors.trasplantado && <span className='span-error'> La fecha de trasplantado es requerida </span>}
 
         <label htmlFor='abonado'>Abonado:</label>
-        <input type='date' className="label-form" id='abonado' {...register('abonado', { required: '' })} /><br />
+        <input type='date' className="label-form" id='abonado' {...register('abonado', { required: true })} /><br />
         {errors.abonado && <span className='span-error'> La fecha de abonado es requerida </span>}
 
         <label htmlFor='notas'>Notas</label>
-        <input className='label-form-notas' id='notas' {...register('notas', { required: '' })} type='text' name='notas' placeholder='' />
-        { errors.notas && <span className='span-error'> La fecha de notas es requerida </span>}
+        <input className='label-form-notas' id='notas' {...register('notas', { required: true })} type='text' name='notas' placeholder='' />
+        { errors.notas && <span className='span-error'> La casilla de notas es requerida </span>}
         {/* Botón de envío */}
         <button className='boton-form' type='submit'>Enviar</button>
       </form>

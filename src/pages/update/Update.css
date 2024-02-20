@@ -35,6 +35,7 @@ body {
     height: 5vh;
     border-radius: 10px;
     width: 90%;
+    margin-bottom: 0;
 }
 
 .label-form-notas {
@@ -47,4 +48,9 @@ body {
     justify-content: flex-start;
     overflow: auto;
     margin-top: auto;
+}
+.span-error{
+    color: red;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
