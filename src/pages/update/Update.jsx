@@ -11,7 +11,7 @@ const Update = () => {
   const [bonsai, setBonsai] = useState() 
   const {id} = useParams();
   const navigate = useNavigate();
-  const { register, handleSubmit, formState: {errors} } = useForm()
+  const { register, handleSubmit, setValue, formState: {errors} } = useForm()
 
   useEffect(() => {
     const fetchData = async() =>{
@@ -19,12 +19,17 @@ const Update = () => {
     const bonsaiData = await getBonsaiById(id)
     console.log(bonsaiData);
     setBonsai(bonsaiData)
+    if (bonsaiData) {
+        setValue('especie', bonsaiData.especie)
+        setValue('trasplantado', new Date(Date.parse(bonsaiData.trasplantado)).toISOString());
+        setValue('abonado', new Date(Date.parse(bonsaiData.abonado)).toISOString());
+        setValue('notas', bonsaiData.notas);      }
     
     }
     fetchData()
     
   },[id])
-  console.log(bonsai);
+  {bonsai && console.log(bonsai)}
 
 
 //Función que se ejecuta al enviar el formulario

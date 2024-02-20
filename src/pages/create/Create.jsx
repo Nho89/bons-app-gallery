@@ -11,7 +11,6 @@ const Create = () => {
 
     
   const bonsais = (data) =>{
-      data.image = image;
       postData(data)
       
       navigate('/')
