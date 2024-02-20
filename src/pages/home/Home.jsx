@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <>
-    <h1 className='title-bonsais'>Mis  Bonsáis : </h1>
+    <h1 className='title-bonsais'>Mis  Bonsáis </h1>
     <div style={{textAlign:"center", minHeight:"100vh"}}>
     <Card bonsais={bonsais}/>
       </div>
