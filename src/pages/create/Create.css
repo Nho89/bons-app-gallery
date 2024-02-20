@@ -35,6 +35,9 @@ body {
     height: 6vh;
     border-radius: 10px;
     width: 90%;
+    box-shadow: none;
+    border: none;
+    outline: none;
 }
 
 .label-form-notas {
@@ -42,9 +45,13 @@ body {
     height: 30vh;
     border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: none;
+    border: none;
+    outline: none;
 }
 .boton-form{
     margin-bottom: 10px;
     width: 20%;
     border-radius: 5px;
+    
 }
