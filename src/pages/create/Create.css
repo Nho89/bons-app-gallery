@@ -38,6 +38,8 @@ body {
     box-shadow: none;
     border: none;
     outline: none;
+    position: relative; 
+    color: transparent;
 }
 
 .label-form-notas {
@@ -57,4 +59,22 @@ body {
     box-shadow: none;
     border: none;
     outline: none
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url('../../assets/logo-calendar.png') no-repeat;
+    background-size: cover;
+    width: 20px; 
+    height: 20px;
+    border: none; 
+    margin-left: 9px;
+    cursor: pointer; 
+    position: absolute; 
+    top: 50%; 
+    left: 5px; 
+    transform: translateY(-50%); 
+}
+
+@media only screen and (min-width: 768px) {
+    
 }
