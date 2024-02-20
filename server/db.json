@@ -2,24 +2,26 @@
   "bonsais": [
     {
       "especie": "Acebuche",
+      "abonado": "1-2-2023",
+      "trasplantado": "18-4-2020",
+      "image": "./src/assets/images/acebuche.png",
+      "notas": "prueba",
+      "id": "1"
+    },
+    {
+      "especie": "Acebuche",
       "abonado": "5-7-2023",
       "trasplantado": "2-5-2023",
       "image": "./src/assets/images/Acebuche2.png",
-      "id": "2",
-      "text": "esto es un texto de prueba"
-    },
-    {
-      "especie": "Arces",
-      "abonado": "5-2-2024",
-      "trasplantado": "18-6-2020",
-      "image": "./src/assets/images/bosque-arces.png",
-      "id": "3"
+      "notas": "hola",
+      "id": "2"
     },
     {
       "especie": "Chaemomeles",
       "abonado": "5-6-2023",
       "trasplantado": "5-4-2023",
       "image": "./src/assets/images/chaenomeles.png",
+      "notas": "hola",
       "id": "4"
     },
     {
@@ -27,6 +29,7 @@
       "abonado": "12-1-2024",
       "trasplantado": "18-11-2019",
       "image": "./src/assets/images/junipero.png",
+      "notas": "hola",
       "id": "5"
     },
     {
@@ -34,6 +37,7 @@
       "abonado": "20-7-2023",
       "trasplantado": "28-3-2019",
       "image": "./src/assets/images/juniperonana.png",
+      "notas": "hola",
       "id": "6"
     },
     {
@@ -41,6 +45,7 @@
       "abonado": "5-1-2024",
       "trasplantado": "18-4-2021",
       "image": "./src/assets/images/pinoblanco.png",
+      "notas": "hola",
       "id": "7"
     },
     {
@@ -48,6 +53,7 @@
       "abonado": "5-5-2023",
       "trasplantado": "6-6-2020",
       "image": "./src/assets/images/sabina.png",
+      "notas": "hola",
       "id": "8"
     },
     {
@@ -55,6 +61,7 @@
       "abonado": "29-6-2023",
       "trasplantado": "18-4-2020",
       "image": "./src/assets/images/sabina2.png",
+      "notas": "hola",
       "id": "9"
     },
     {
@@ -62,6 +69,7 @@
       "abonado": "16-3-2023",
       "trasplantado": "19-3-2020",
       "image": "./src/assets/images/sabina3.png",
+      "notas": "hola",
       "id": "10"
     }
   ]

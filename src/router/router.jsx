@@ -3,8 +3,7 @@ import Home from "../pages/home/Home";
 import Create from "../pages/create/Create";
 import Update from "../pages/update/Update";
 import LayoutPublic from "../components/LayoutPublic";
-import {deleteData, getData} from '../services/bonsaisServe'
-import CardDetail from "../components/CardDetail";
+import { getData} from '../services/bonsaisServe'
 
 const router = createBrowserRouter([
     {
@@ -21,14 +20,9 @@ const router = createBrowserRouter([
       element: <Create/>,
       },
       {
-      path: "/update",
+      path: "/update/:id",
       element: <Update />,
-      }/* ,
-      {
-      path: "/card",
-      element: <CardDetail />,
-        
-      } */
+      }
     ],
     },
   ],

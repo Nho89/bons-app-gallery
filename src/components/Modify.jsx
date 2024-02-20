@@ -1,11 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Modify = () => {
+const Modify = ({id}) => {
     const navigate = useNavigate()
 
     const onClick = () => {
-        navigate('/update')
+        navigate(`/update/${id.toString()}`)
     }
 
   return (

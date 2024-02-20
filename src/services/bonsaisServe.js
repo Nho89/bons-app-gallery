@@ -1,5 +1,7 @@
 import axios from "axios";
 
+//GET
+
 export const getData = async () => {
     const response = await fetch('http://localhost:3000/bonsais');
     const data = await response.json();
@@ -9,19 +11,38 @@ export const getData = async () => {
   //POST
 
   export const postData = async (data) =>{
-  axios.post('http://localhost:3000/bonsais',data)
-  
-  return(data)
+  const bonsais = await axios.post('http://localhost:3000/bonsais',data)
+  alert("Bonsai creado exitosamente")
+  window.location.reload(); 
+  return bonsais
 }
 
   //UPDATE
-  export  const updateData = async () =>{
-  }
+   export const updateData = async (id, newData) => {
+    try {
+      const response = await fetch(`http://localhost:3000/bonsais/${id}`, {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newData) // Convertir los datos a formato JSON
+      });
+  
+    } catch (error) {
+      console.error("Error al realizar la solicitud:", error);
+     }
+  };
 
   //DELETE
   export const deleteData = async (id) =>{
     if(confirm("¿Estás seguro que quieres eliminar este bonsai?") === true)
     await fetch(`http://localhost:3000/bonsais/${id}`,{method:"DELETE"})
-    await getData();
-    location.reload();
+    
+    window.location.reload();
   }
+
+  export const getBonsaiById = async (id) => {
+  const response = await fetch(`http://localhost:3000/bonsais/${id}`);
+  const data = await response.json();
+  return data;
+};
