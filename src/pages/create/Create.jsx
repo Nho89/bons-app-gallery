@@ -11,7 +11,7 @@ const Create = () => {
 
     
   const bonsais = (data) =>{
-      data.image = image;
+      // data.image = image;
       postData(data)
       
       navigate('/')
@@ -23,8 +23,8 @@ const Create = () => {
 
       <form className='container-form' onSubmit={handleSubmit(bonsais)}>
 
-        <label htmlFor="image" >Añade la imagen de tu Bonsai<img src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="" /></label>
-        <input style={{color:"transparent"}} type="file" /* onChange={(e) => uploadImage(e)} */  {...register("image")} />
+        <label htmlFor="image" >Añade la imagen de tu bonsái<img src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="" /></label>
+        <input style={{color:"transparent"}} type="file" {...register("image")} />
 
         <label htmlFor="especie">Especie:</label>
         <input className="label-form" type='text' {...register("especie", { required: true })} required/>
@@ -38,7 +38,7 @@ const Create = () => {
         <label htmlFor="notas">Notas</label>
         <input className="label-form-notas" type="text" name="notas" id="notas" {...register("notas")} placeholder=""/>
 
-        <button style={{width: "25vw", backgroundColor:"#F69E92", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)", width: "90%", marginBottom: "10%"  }} className="boton-form" type='submit'>Enviar</button>
+        <button style={{width: "25vw", backgroundColor:"#F69E92", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)", width: "90%", marginBottom: "10%" }} className="boton-form" type='submit'>Enviar</button>
 
     </form>
         

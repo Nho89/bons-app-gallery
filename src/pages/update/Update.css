@@ -32,12 +32,22 @@ body {
 }
 
 .label-form {
-    height: 5vh;
+    height: 8vh;
     border-radius: 10px;
     width: 90%;
+    box-shadow: none;
+    border: none;
+    outline: none;
 }
 
 .label-form-notas {
     width: 90%;
     height: 30vh;
+    box-shadow: none;
+    border: none;
+    outline: none;
 }
+
+@media only screen and (min-width: 768px) {
+    
+  }

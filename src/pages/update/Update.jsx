@@ -39,23 +39,24 @@ const onSubmit = async (newData) => {
 };
   return (
     <>
-    <form className= 'container-form'onSubmit={handleSubmit(onSubmit)}>
+    
     <h1 className='title-bonsais'>Modificar mi bonsái</h1>
-
+  <form className= 'container-form'onSubmit={handleSubmit(onSubmit)}>
     <div>
+    <label htmlFor="image" ><img src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="" /></label>
       <input type="file" style={{color: "transparent"}} id="image" required/><br/>
     </div>
     
       <label htmlFor="especie">Especie:</label>
-      <input type="text" id="especie" {...register('especie',{required:'Este campo es obligatorio'})}/><br/>
+      <input className="label-form" type="text" id="especie" {...register('especie',{required:'Este campo es obligatorio'})}/><br/>
       <label htmlFor="trasplantado">Trasplantado:</label>
-      <input type="date" id="trasplantado" {...register('trasplantado')}/><br/>
+      <input className="label-form" type="date" id="trasplantado" {...register('trasplantado')}/><br/>
       <label htmlFor="abonado">Abonado:</label>
-      <input type="date" id="abonado"{...register('abonado')}/><br/>
+      <input className="label-form" type="date" id="abonado"{...register('abonado')}/><br/>
       <label htmlFor="notas">Notas</label>
       <input className="label-form-notas" id="notas"{...register('notas')} type="text" name="notas" placeholder=""/>
 {errors.especie && <p>Introduce una especie{errors.especie.message}</p>}
-<button className="boton-form" type='submit' onClick={handleSubmit(onSubmit)}>Enviar</button>
+<button style={{width: "25vw", backgroundColor:"#E1E361", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)", width: "90%", marginBottom: "10%" }}  type='submit' onClick={handleSubmit(onSubmit)}>Actualizar</button>
 </form>
 </>
   );
