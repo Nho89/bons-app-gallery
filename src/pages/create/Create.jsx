@@ -16,10 +16,10 @@ const Create = () => {
       navigate('/')
 
   //cloudinary
-  /* const {image, setImage} = useState("");
-  const {loading, setLoading} = useState(false); */
+/*   const {image, setImage} = useState("");
+  const {loading, setLoading} = useState(false);
 
-/*   const uploadImage = async (e)=>{
+  const uploadImage = async (e)=>{
     const files = e.target.files;
     const data = new FormData();
     data.append("file", files[0]);
@@ -35,8 +35,8 @@ const Create = () => {
     const file = await res.json();
     setImage(file.secure_url)
     setLoading(false);
-  }
- */
+  } */
+
 
 
     }
@@ -49,7 +49,7 @@ const Create = () => {
       <label htmlFor="abonado">Abono:</label>
       <input name="abonado" id="abonado" {...register("abonado")} required/>
       <label htmlFor="image">Imagen Bonsai:</label>
-      <input type="file" onChange={(e) => uploadImage(e)}  {...register("image")} />
+      <input type="file" /* onChange={(e) => uploadImage(e)} */  {...register("image")} />
       <button type='submit'>Enviar</button>
     </form>
       )
