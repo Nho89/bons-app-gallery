@@ -19,8 +19,8 @@ const onSubmit = (data) => {
 
       <form className='container-form' onSubmit={handleSubmit(onSubmit)}>
 
-        <label htmlFor="image" >Añade la imagen de tu Bonsai<img src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="" /></label>
-        <input style={{color:"transparent"}} type="file" {...register("image")} />
+        <label htmlFor="image">Añade la imagen de tu Bonsai<img src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="imagen de un marco de fotos" /></label>
+        <input id="image" style={{ color: "transparent", opacity: 0, position: "absolute" }} type="file" {...register("image")} />
 
         <label htmlFor="especie">Especie:</label>
         <input className="label-form" type='text' {...register("especie", { required: true })} required/>
