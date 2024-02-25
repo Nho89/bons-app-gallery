@@ -8,9 +8,9 @@ const LayoutPublic = () => {
   return (
     <div style={{ minHeight:"100%",position:"relative",display: 'flex', flexDirection: 'column' }}>
         <Nav/>
-        <main>
+        {/* <main> */}
         <Outlet/>
-        </main>
+        {/* </main> */}
         <Footer/>
     </div>
     

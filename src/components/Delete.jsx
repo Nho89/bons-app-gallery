@@ -1,10 +1,14 @@
 import React from 'react'
 import {deleteData} from '../services/bonsaisServe'
+import { useNavigate } from 'react-router-dom'
 
 const Delete = ({id}) => {
-  console.log(id)
+  const navigate = useNavigate()
+  /* console.log(id) */
   const bonsaiDelete = () => {
-    deleteData(id)}
+    deleteData(id)
+    navigate(0)  
+  }
   return (
     <>
     <div>
