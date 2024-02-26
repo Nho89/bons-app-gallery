@@ -6,7 +6,7 @@
 We have developed Tech Revive, a marketplace that offers high quality refurbished technology products at affordable prices by making smart choices to reduce environmental impact. 
 
 # Technologies 
-![My Skills](https://skillicons.dev/icons?i=html,css,js,git,figma,github,nodejs,vite,discord,react)
+![My Skills](https://skillicons.dev/icons?i=html,css,js,git,figma,github,vite,discord,react)
 
 # 🔧 Installation 
 This is a proyect on [React](https://es.react.dev/)
