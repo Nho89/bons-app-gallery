@@ -63,6 +63,16 @@
       "image": "./src/assets/images/sabina3.png",
       "notas": "El bonsái Sabina, con su corteza rugosa y su hábito de crecimiento torcido, evoca la fuerza y la resistencia de la naturaleza. ",
       "id": "10"
+    },
+    {
+      "id": "afa8",
+      "image": {
+        "0": {}
+      },
+      "especie": "cambio",
+      "trasplantado": "2024-03-01",
+      "abonado": "2024-02-23",
+      "notas": "Soy un bonsai"
     }
   ]
 }
