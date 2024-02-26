@@ -1,23 +1,26 @@
-import React, { useState } from 'react'
-import { useForm } from  'react-hook-form'
-import { postData} from '../../services/bonsaisServe'
+import React, { useState } from 'react';
+import { useForm } from  'react-hook-form';
+import { postData} from '../../services/bonsaisServe';
 import axios from "axios";
 import './Create.css'
 
 
 const Create = () => {
-  const {Url_Imagen, setUrl_Imagen } = useState("");
+  const [Url_Imagen, setUrl_Imagen] = useState("");
   const { handleSubmit, register, 
     formState: {errors}
   } = useForm();
 
   const onSubmit = (data) => {
-    postData(data)
+    const response = postData(data)
+    .then(response => response.json())
+      .then(data => {
+        console.log(data);
+      })
   };
 
   const changeUploadImage = async (e) => {
     const file = e.target.files[0];
-
     const data = new FormData(); 
 
     data.append("file", file);
@@ -37,21 +40,21 @@ const Create = () => {
     <>
 
     <h1 className='title-bonsais'>Añadir Bonsai</h1>
-     
-    <form className='container-form' onSubmit={handleSubmit(onSubmit)}>
 
       <label htmlFor="image">Añade la imagen de tu Bonsai</label>
-      <input type="file"  accept="image/*" onChange={changeUploadImage} />
+      <input type="file" accept="image/*" onChange={changeUploadImage} />
 
       {Url_Imagen && (
         <div>
-        <img src={"Url_Imagen"}  alt="Imagen de mi bonsai" />
+          <img src={Url_Imagen} alt="Imagen de mi bonsai" style={{ maxWidth: '300px', maxHeight: '300px' }} />
         </div>)
       }
-      
+
       {
         errors.image && <span>Imagen requerida</span>
       }
+     
+    <form className='container-form' onSubmit={handleSubmit(onSubmit)}>
     
       <br />
 

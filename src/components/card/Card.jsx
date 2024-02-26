@@ -7,14 +7,13 @@ import { useState } from 'react'
 
 const Card = ({bonsais}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
    <>
    {
       bonsais.map(bonsai =>{
         return(
           //Este es el contenedor grande.
-      <div key={bonsai.id} className='card-bonsai-container' style={{textAlign:"center", /* height:"100vh", */width:"100%", display:"flex", alignItems:"center", justifyContent:"end", flexDirection:"column", gap:"20px"}}> 
+      <div key={bonsai.id} className='card-bonsai-container' style={{/* height:"100vh", */width:"100%", display:"flex", alignItems:"center", justifyContent:"end", flexDirection:"column", gap:"20px"}}> 
       
         <div className="image-card" style={{width: "70%", display:"flex", flexWrap:"wrap", marginTop:"20%"}}><img src={bonsai.image} alt="" style={{maxWidth:"100%", textAlign:"center"}}/>
         </div>
