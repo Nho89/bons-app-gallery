@@ -5,6 +5,7 @@ import { postData} from '../../services/bonsaisServe'
 import {useNavigate} from 'react-router-dom'
 import axios from "axios";
 import './Create.css'
+import Card from '../../components/card/Card';
 
 const Create = () => {
   const [Url_Imagen, setUrl_Imagen ] = useState("");
@@ -41,11 +42,12 @@ const changeUploadImage = async (e) => {
       <form className='container-form' onSubmit={handleSubmit(onSubmit)}>
 
         <label htmlFor="image">Añade la imagen de tu Bonsai<img src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="imagen de un marco de fotos" /></label>
-        <input id="image" style={{ color: "transparent", opacity: 0, position: "absolute" }} type="file" {...register("image")} accept="image/*" onChange={changeUploadImage}/>
+        <input id="image" style={{ color: "transparent", opacity: 0, position: "absolute" }} type="file" 
+        {...register("image", { required: true })} accept="image/*" onChange={changeUploadImage} />
 
         {Url_Imagen && (
         <div>
-        <img src={Url_Imagen}  alt="Imagen de mi bonsai" />
+        <img src={Url_Imagen}  alt="Imagen de mi bonsai" style={{maxWidth:"200px"}}/>
         </div>)
       }
       
@@ -68,11 +70,14 @@ const changeUploadImage = async (e) => {
         <input className="label-form-notas" type="text" name="notas" id="notas" {...register("notas")} placeholder=""/>
 
         <button style={{width: "25vw", backgroundColor:"#F69E92", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)", width: "90%", marginBottom: "10%"  }} className="boton-form" type='submit'>Enviar</button>
-    </form> 
+         
+    </form>
+    {Url_Imagen && <Card bonsais={[{ id: "tempId", image: Url_Imagen }]} />}
         </>
        
-      )
-    }  
+      
+      );
+    };  
    
 
 export default Create
