@@ -1,10 +1,13 @@
-import React from 'react'
+
+import React, { useState } from 'react'
 import {useForm} from  'react-hook-form'
 import { postData} from '../../services/bonsaisServe'
 import {useNavigate} from 'react-router-dom'
+import axios from "axios";
 import './Create.css'
 
 const Create = () => {
+  const [Url_Imagen, setUrl_Imagen ] = useState("");
   const navigate = useNavigate()
   const { handleSubmit, register, errors} = useForm()
 
@@ -13,6 +16,24 @@ const onSubmit = (data) => {
     navigate('/'); //viaja a la home una vez creado el nuevo bonsai.
   });
 };
+
+const changeUploadImage = async (e) => {
+    const file = e.target.files[0];
+
+    const data = new FormData(); 
+
+    data.append("file", file);
+    data.append("upload_preset","preset_bonsai");
+
+    const response = await axios.post(
+      "https://api.cloudinary.com/v1_1/dputvv9bi/image/upload", 
+      data
+      );
+      console.log(response.data);
+
+  setUrl_Imagen(response.data.secure_url);
+
+};
       return (
         <>
          <h1 className='title-bonsais'>Añadir Bonsai</h1>
@@ -20,7 +41,19 @@ const onSubmit = (data) => {
       <form className='container-form' onSubmit={handleSubmit(onSubmit)}>
 
         <label htmlFor="image">Añade la imagen de tu Bonsai<img src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="imagen de un marco de fotos" /></label>
-        <input id="image" style={{ color: "transparent", opacity: 0, position: "absolute" }} type="file" {...register("image")} />
+        <input id="image" style={{ color: "transparent", opacity: 0, position: "absolute" }} type="file" {...register("image")} accept="image/*" onChange={changeUploadImage}/>
+
+        {Url_Imagen && (
+        <div>
+        <img src={Url_Imagen}  alt="Imagen de mi bonsai" />
+        </div>)
+      }
+      
+      {/* {
+        errors.image && <span>Imagen requerida</span>
+      } */}
+    
+      <br />
 
         <label htmlFor="especie">Especie:</label>
         <input className="label-form" type='text' {...register("especie", { required: true })} required/>

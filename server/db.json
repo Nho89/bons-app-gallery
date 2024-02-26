@@ -65,13 +65,23 @@
       "id": "10"
     },
     {
-      "id": "afa8",
+      "id": "a2d6",
       "image": {
         "0": {}
       },
-      "especie": "cambio",
-      "trasplantado": "2024-03-01",
-      "abonado": "2024-02-23",
+      "especie": "casa",
+      "trasplantado": "2024-02-17",
+      "abonado": "2024-02-03",
+      "notas": "Soy un bonsai"
+    },
+    {
+      "id": "25b6",
+      "image": {
+        "0": {}
+      },
+      "especie": "dad",
+      "trasplantado": "2024-02-14",
+      "abonado": "2024-02-22",
       "notas": "Soy un bonsai"
     }
   ]

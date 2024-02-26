@@ -15,7 +15,7 @@ const Card = ({bonsais}) => {
    {
       bonsais.map(bonsai =>{
         return(
-      <div key={bonsai.id} className='card-bonsai-container'>
+      <div key={bonsai.id} /* bonsai={bonsai} */ className='card-bonsai-container'>
       
         
       
