@@ -7,6 +7,7 @@ import { useState } from 'react'
 
 const Card = ({bonsais}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
    <>
    {

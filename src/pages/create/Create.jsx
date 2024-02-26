@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
-// import { useForm } from  'react-hook-form'
-// import { postData} from '../../services/bonsaisServe'
+import { useForm } from  'react-hook-form'
+import { postData} from '../../services/bonsaisServe'
 import axios from "axios";
 import './Create.css'
 
 
 const Create = () => {
   const {Url_Imagen, setUrl_Imagen } = useState("");
-  // const { handleSubmit, register, 
-  //   formState: {errors}
-  // } = useForm();
+  const { handleSubmit, register, 
+    formState: {errors}
+  } = useForm();
 
-  // const bonsais = (data) =>{
-  //   postData(data)
-  // }
+  const onSubmit = (data) => {
+    postData(data)
+  };
 
   const changeUploadImage = async (e) => {
     const file = e.target.files[0];
@@ -21,7 +21,7 @@ const Create = () => {
     const data = new FormData(); 
 
     data.append("file", file);
-    // data.append("upload_preset","preset_bonsai");
+    data.append("upload_preset","preset_bonsai");
 
     const response = await axios.post(
       "https://api.cloudinary.com/v1_1/dputvv9bi/image/upload", 
@@ -29,7 +29,7 @@ const Create = () => {
       );
       console.log(response.data);
 
-  // setUrl_Imagen(response.data.secure_url);
+  setUrl_Imagen(response.data.secure_url);
 
 };
 
@@ -38,7 +38,7 @@ const Create = () => {
 
     <h1 className='title-bonsais'>Añadir Bonsai</h1>
      
-    <form className='container-form'>
+    <form className='container-form' onSubmit={handleSubmit(onSubmit)}>
 
       <label htmlFor="image">Añade la imagen de tu Bonsai</label>
       <input type="file"  accept="image/*" onChange={changeUploadImage} />
@@ -49,12 +49,12 @@ const Create = () => {
         </div>)
       }
       
-      {/* {
+      {
         errors.image && <span>Imagen requerida</span>
       }
     
-      <br /> */}
-{/* 
+      <br />
+
       <label htmlFor="especie">Especie </label>
       <input className="label-form" type='text' {...register("especie", { required: "La especie es requerida" })}
       />
@@ -81,7 +81,7 @@ const Create = () => {
       {
       errors.notas && <span> La fecha de notas es requerida </span>
       }
-      <button className="boton-form" type='submit'>Enviar</button> */}
+      <button className="boton-form" type='submit'>Enviar</button>
     </form>
     </>
       )
