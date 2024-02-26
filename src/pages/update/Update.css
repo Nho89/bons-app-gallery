@@ -25,21 +25,32 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    padding-left: 8vw;
-    padding-top: 5vh;
     background-color: #044C40;
-    border-radius: 20px;
-    width: 100vw;
+    border-radius: 20px 20px 0 0 ;
+    width: 100%;
 
 }
 
 .label-form {
-    height: 6vh;
+    height: 5vh;
     border-radius: 10px;
     width: 90%;
+    margin-bottom: 0;
 }
 
 .label-form-notas {
     width: 90%;
-    height: 30vh;
+    height: 20vh;
+    box-sizing: border-box;
+    text-align: justify;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: auto;
+    margin-top: auto;
+}
+.span-error{
+    color: red;
+    margin-top: 0;
+    margin-bottom: 10px;
 }

@@ -1,5 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box
+}
 body {
     margin: 0;
     font-family: system-ui;
-
 }
+.title-bonsais {
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.container-form {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #F6F0BE;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 5% 0 0 9%;
+    background-color: #044C40;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    gap: 5px;
+}
+
+.label-form {
+    height: 6%;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.label-form-notas {
+    width: 90%;
+    height: 20vh;
+    box-sizing: border-box;
+    text-align: justify;
+    display: block;
+    overflow: auto;
+    margin-top: auto;
+}
+
+.boton-form {
+    margin-bottom: 10px;
+    width: 20%;
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+    outline: none
+}
+
