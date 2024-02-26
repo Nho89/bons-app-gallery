@@ -3,16 +3,40 @@ import {useForm} from  'react-hook-form'
 import { postData} from '../../services/bonsaisServe'
 import {useNavigate} from 'react-router-dom'
 import './Create.css'
+import axios from 'axios';
 
 const Create = () => {
   const navigate = useNavigate()
   const { handleSubmit, register, errors} = useForm()
 
-const onSubmit = (data) => {
-  postData(data).then(() => {
-    navigate('/'); //viaja a la home una vez creado el nuevo bonsai.
-  });
-};
+  const onSubmit = async (data) => {
+    // Create a FormData object
+    const formData = new FormData();
+    // Append the file to the form data
+    formData.append('file', data.image[0]);
+    formData.append('upload_preset', "preset_bonsai"); 
+  
+    try {
+      // Send a POST request to Cloudinary's API endpoint
+      const response = await axios.post(
+        `https://api.cloudinary.com/v1_1/dputvv9bi/image/upload`,
+        formData
+      );
+  
+      // Assuming the response contains the URL of the uploaded image
+      const imageUrl = response.data.secure_url;
+  
+      // Now, you can save this imageUrl to your database (db.json)
+      // Assuming you have a function to save data to db.json
+      await saveImageUrlToDb(imageUrl);
+  
+      // Navigate to the home page after successful upload
+      navigate('/');
+    } catch (error) {
+      console.error('Error uploading image:', error);
+      // Handle errors appropriately
+    }
+  };
       return (
         <>
          <h1 className='title-bonsais'>Añadir Bonsai</h1>
@@ -40,6 +64,6 @@ const onSubmit = (data) => {
        
       )
     }  
-   
 
 export default Create
+
