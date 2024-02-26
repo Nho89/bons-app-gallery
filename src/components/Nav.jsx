@@ -1,13 +1,20 @@
 import React from 'react'
 import Add from './Add'
+import './Nav.css'
 import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
     <>
     <nav className='navbar' style={{display: "flex", justifyContent: "space-between", padding:"20px"}} >
-        <Link to="/" replace><img src="" alt="" />logo</Link>
-        <Add/> 
+        <Link to="/" replace className='logo-nav'><img src="../src\assets\images\Bonsai.png" alt="" /></Link>
+        <ul class="contain-menu">
+          <li class="header-text">Home</li>
+          <li class="header-text">Mis bonsáis</li>
+          <Link to="/create" replace class="header-text"><li >Añadir</li></Link>
+          <li class="header-text">Detalles</li>
+        </ul>
+        <Add className="add-nav"/> 
     </nav>
     </>
     

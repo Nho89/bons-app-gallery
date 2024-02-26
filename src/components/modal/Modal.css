@@ -31,3 +31,8 @@
     font-size: 1em;
     margin-bottom: 0;    
 }
+@media only screen and (min-width: 768px) {
+    .modal{
+        width: 700px;
+    }
+}
