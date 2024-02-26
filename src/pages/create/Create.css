@@ -26,7 +26,7 @@ body {
     align-items: left;
     padding: 5% 0 0 9%;
     background-color: #044C40;
-    border-radius: 0 20px 0 0;
+    border-radius: 20px 20px 0 0;
     width: 100%;
     gap: 5px;
 }
@@ -44,12 +44,12 @@ body {
 
 .label-form-notas {
     width: 90%;
-    height: 30vh;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: none;
-    border: none;
-    outline: none
+    height: 20vh;
+    box-sizing: border-box;
+    text-align: justify;
+    display: block;
+    overflow: auto;
+    margin-top: auto;
 }
 
 .boton-form {

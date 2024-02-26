@@ -20,30 +20,34 @@ const Card = ({bonsais}) => {
         
       
         <div className= 'card-box-turquoise' >
-          <img className='image-bonsai' src={bonsai.image} alt="La imagen del bonsai que sube el usuario" ></img>
-        <h3 className='title-card-box' >{bonsai.especie}</h3>
-        <div className='card-text' >
-        <p>Trasplantado</p>
-        <p>Abonado</p>  
-        </div>
+          <div>
+              <img className='image-bonsai' src={bonsai.image} alt="La imagen del bonsai que sube el usuario" ></img>
+          </div>
+          <div className='box-card'>
+            <h3 className='title-card-box' >{bonsai.especie}</h3>
+            <div className='card-text' >
+                <p>Trasplantado</p>
+                <p>Abonado</p>  
+            </div>
         
-        <div className='dates-card-input' >
-            <div  className='date-text' >
+            <div className='dates-card-input' >
+              <div  className='date-text' >
                 <p>{bonsai.trasplantado}</p>
-            </div>
-            <div className='date-text' >
+              </div>
+              <div className='date-text' >
                 <p>{bonsai.abonado}</p>
+              </div>
             </div>
-        </div>
+            <div className='card-buttons' style={{display: "flex", marginTop:"20px", marginBottom:"40px", gap:"10px"}}>
+              <button className='buttons-card-detail' onClick={()=> setIsModalOpen(true)}>Detalles</button>
+              <button className='buttons-card-modified'  type="button" onClick = {()=>navigate(`/update/${bonsai.id}`)}>Modificar</button>
+              <Delete  id={bonsai.id}/>
+            </div>
+              <Modal isOpen = {isModalOpen} closeModal={()=> setIsModalOpen(false)} notas={bonsai.notas}/>
 
-        <div style={{display: "flex", marginTop:"20px", marginBottom:"40px", gap:"10px"}}>
-         <button style={{width: "25vw", backgroundColor:"#F69E92", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)"  }} onClick={()=> setIsModalOpen(true)}>Detalles</button>
-         <button style={{width: "25vw", backgroundColor:"#F4DC5E", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)" }} className = "modify" type="button" onClick = {()=>navigate(`/update/${bonsai.id}`)}>Modificar</button>
-        <Delete id={bonsai.id}/>
-        </div>
-        <Modal isOpen = {isModalOpen} closeModal={()=> setIsModalOpen(false)} notas={bonsai.notas}/>
-
-        </div>
+            </div>
+          </div>
+          
 
       </div>  
     
