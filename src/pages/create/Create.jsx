@@ -10,9 +10,10 @@ import Card from '../../components/card/Card';
 const Create = () => {
   const [Url_Imagen, setUrl_Imagen ] = useState("");
   const navigate = useNavigate()
-  const { handleSubmit, register, errors} = useForm()
+  const { handleSubmit,register, errors} = useForm()
 
 const onSubmit = (data) => {
+  data.image = Url_Imagen
   postData(data).then(() => {
     navigate('/'); //viaja a la home una vez creado el nuevo bonsai.
   });
@@ -26,14 +27,13 @@ const changeUploadImage = async (e) => {
     data.append("file", file);
     data.append("upload_preset","preset_bonsai");
 
+
     const response = await axios.post(
       "https://api.cloudinary.com/v1_1/dputvv9bi/image/upload", 
       data
       );
+      setUrl_Imagen(response.data.secure_url);
       console.log(response.data);
-
-  setUrl_Imagen(response.data.secure_url);
-
 };
       return (
         <>
@@ -72,7 +72,6 @@ const changeUploadImage = async (e) => {
         <button style={{width: "25vw", backgroundColor:"#F69E92", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)", width: "90%", marginBottom: "10%"  }} className="boton-form" type='submit'>Enviar</button>
          
     </form>
-    {Url_Imagen && <Card bonsais={[{ id: "tempId", image: Url_Imagen }]} />}
         </>
        
       
