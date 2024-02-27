@@ -3,8 +3,10 @@ import './Update.css';
 import { useForm } from 'react-hook-form';
 import { updateData, getBonsaiById } from '../../services/bonsaisServe';
 import { useParams, useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 const Update = () => {
+  const [Url_Imagen, setUrl_Imagen ] = useState("");
   const [bonsai, setBonsai] = useState({}); 
   const { id } = useParams(); // obtenemos el parámetro id de la URL
   const navigate = useNavigate();
@@ -32,6 +34,7 @@ const Update = () => {
 
   //cuando enviamos el form, se ejecuta la función onSubmit, que llama a updateData, para actualizar datos e ir luego a la home.
   const onSubmit = async (newData) => {
+    newData.image = Url_Imagen
     try {
       await updateData(id, newData);
       console.log('Datos actualizados correctamente');
@@ -41,12 +44,37 @@ const Update = () => {
     }
   };
 //gestionamos el envío del form con handleSubmit. Se registran los campos en register.
+  const changeUploadImage = async (e) => {
+    const file = e.target.files[0];
 
+    const data = new FormData(); 
+
+    data.append("file", file);
+    data.append("upload_preset","preset_bonsai");
+
+
+    const response = await axios.put(
+      "https://api.cloudinary.com/v1_1/dputvv9bi/image/upload", 
+      data
+      );
+      setUrl_Imagen(response.data.secure_url);
+      console.log(response.data);
+};
   return (
     <>
       <form className='container-form' onSubmit={handleSubmit(onSubmit)}> 
         <h1 className='title-bonsais'>Modificar mi bonsái</h1>
         {/* Campos del formulario */}
+        <label htmlFor="image">Cambia la imagen de tu Bonsai<img src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="imagen de un marco de fotos" /></label>
+        <input id="image" style={{ color: "transparent", opacity: 0, position: "absolute" }} type="file" 
+        {...register("image", { required: true })} accept="image/*" onChange={changeUploadImage} />
+
+        {Url_Imagen && (
+        <div>
+        <img src={Url_Imagen}  alt="Imagen de mi bonsai" style={{maxWidth:"200px"}}/>
+        </div>)
+      }
+
         <label htmlFor='especie'>Especie:</label>
         <input type='text' className="label-form" id='especie' {...register('especie', { required: 'La especie es requerida' })} /><br />
         {errors.especie && <span className='span-error'>{errors.especie.message}</span>}

@@ -5,7 +5,6 @@ import { postData} from '../../services/bonsaisServe'
 import {useNavigate} from 'react-router-dom'
 import axios from "axios";
 import './Create.css'
-import Card from '../../components/card/Card';
 
 const Create = () => {
   const [Url_Imagen, setUrl_Imagen ] = useState("");
