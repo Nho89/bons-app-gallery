@@ -4,6 +4,7 @@ import Create from "../pages/create/Create";
 import Update from "../pages/update/Update";
 import LayoutPublic from "../components/LayoutPublic";
 import { getData} from '../services/bonsaisServe'
+import Details from "../pages/details/Details";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
       path: "/update/:id",
       element: <Update />,
+      },
+      {
+        path: "/details",
+        element: <Details/>,
       }
     ],
     },

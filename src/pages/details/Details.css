@@ -1,0 +1,36 @@
+.title-bonsais {
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+
+.card-box-turquoise {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #F6F0BE;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: #044C40;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.label-form-notas {
+    width: 90%;
+    box-sizing: border-box;
+    text-align: justify;
+    display: block;
+    overflow: auto;
+    margin-top: auto;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: #F6F0BE;
+}
+
+
+
