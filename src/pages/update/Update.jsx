@@ -25,6 +25,7 @@ const Update = () => {
         setValue('abonado', bonsaiData.abonado);
         setValue('trasplantado', bonsaiData.trasplantado);
         setValue('notas', bonsaiData.notas);
+        setValue('image', bonsaiData.image)
       } catch (error) {
         console.error('Error al obtener el bonsái:', error);
       }
@@ -34,6 +35,7 @@ const Update = () => {
 
   //cuando enviamos el form, se ejecuta la función onSubmit, que llama a updateData, para actualizar datos e ir luego a la home.
   const onSubmit = async (newData) => {
+    console.log(newData)
     newData.image = Url_Imagen
     try {
       await updateData(id, newData);
@@ -76,22 +78,22 @@ const Update = () => {
       }
 
         <label htmlFor='especie'>Especie:</label>
-        <input type='text' className="label-form" id='especie' {...register('especie', { required: 'La especie es requerida' })} /><br />
+        <input type='text' className="label-form-update" id='especie' {...register('especie', { required: 'La especie es requerida' })} /><br />
         {errors.especie && <span className='span-error'>{errors.especie.message}</span>}
 
         <label htmlFor='trasplantado'>Trasplantado:</label>
-        <input type='date' className="label-form" id='trasplantado' {...register('trasplantado', { required: true })} /><br />
+        <input type='date' className="label-form-update" id='trasplantado' {...register('trasplantado', { required: true })} /><br />
         {errors.trasplantado && <span className='span-error'> La fecha de trasplantado es requerida </span>}
 
         <label htmlFor='abonado'>Abonado:</label>
-        <input type='date' className="label-form" id='abonado' {...register('abonado', { required: true })} /><br />
+        <input type='date' className="label-form-update" id='abonado' {...register('abonado', { required: true })} /><br />
         {errors.abonado && <span className='span-error'> La fecha de abonado es requerida </span>}
 
         <label htmlFor='notas'>Notas</label>
         <textarea className='label-form-notas' id='notas' {...register('notas', { required: true })} type='text' name='notas' placeholder='' />
         { errors.notas && <span className='span-error'> La casilla de notas es requerida </span>}
         {/* Botón de envío */}
-        <button className='boton-form-update' type='submit'>Enviar</button>
+        <button className='boton-form-update' type='submit' >Enviar</button>
       </form>
     </>
   );

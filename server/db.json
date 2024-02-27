@@ -1,7 +1,7 @@
 {
   "bonsais": [
     {
-      "image": "https://res.cloudinary.com/dputvv9bi/image/upload/v1709029556/bonsai_app_images/lob0ye5ee7stjyuzuojd.png",
+      "image": "https://res.cloudinary.com/dputvv9bi/image/upload/v1709059000/bonsai_app_images/l3zbid6kieg9hybokwz1.png",
       "especie": "Acebuche",
       "trasplantado": "2023-05-02",
       "abonado": "2023-07-05",
@@ -63,6 +63,14 @@
       "abonado": "2023-03-16",
       "notas": "El bonsái Sabina, con su corteza rugosa y su hábito de crecimiento torcido, evoca la fuerza y la resistencia de la naturaleza. ",
       "id": "10"
+    },
+    {
+      "id": "58cc",
+      "image": "https://res.cloudinary.com/dputvv9bi/image/upload/v1709058247/bonsai_app_images/sti9fsgxqtanz4e77iks.png",
+      "especie": "hola",
+      "trasplantado": "2024-02-29",
+      "abonado": "2024-02-29",
+      "notas": "dafd"
     }
   ]
 }
