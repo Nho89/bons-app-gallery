@@ -62,7 +62,7 @@ body {
     border-radius: 10px;
     font-size: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    width: 10vw;
     padding: 6px;
     font-family: Poppins;
 }
