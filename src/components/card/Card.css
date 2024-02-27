@@ -5,6 +5,7 @@ body {
     padding: 0;
 
 }
+
 .card-bonsai-container{
     text-align: center;
     width: 100%;
@@ -16,6 +17,7 @@ body {
     font-family: 'Poppins', system-ui;
     margin-top: 5%;
 }
+
 .card-box-turquoise{
     display: flex;
     flex-direction: column;
@@ -26,15 +28,18 @@ body {
     width: 100%;
     /* margin-bottom: 20px; */
 }
+
 .image-bonsai{
     width: 100%;
     /* height: 60%; */
     text-align: center;
 }
+
 .title-card-box{
     color: #F6F0BE;
     font-size: 3rem;
 }
+
 .card-text{
     display: flex;
     justify-content: center;
@@ -44,11 +49,13 @@ body {
     color: #F6F0BE;
     font-size: 1.2rem;
 }
+
 .dates-card-input{
     display: flex;
     gap: 25px;
     align-items: center;
 }
+
 .date-text{
     background-color: #F6F0BE;
     border-radius: 20px;
