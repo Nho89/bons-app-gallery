@@ -88,10 +88,10 @@ const Update = () => {
         {errors.abonado && <span className='span-error'> La fecha de abonado es requerida </span>}
 
         <label htmlFor='notas'>Notas</label>
-        <input className='label-form-notas' id='notas' {...register('notas', { required: true })} type='text' name='notas' placeholder='' />
+        <textarea className='label-form-notas' id='notas' {...register('notas', { required: true })} type='text' name='notas' placeholder='' />
         { errors.notas && <span className='span-error'> La casilla de notas es requerida </span>}
         {/* Botón de envío */}
-        <button className='boton-form' type='submit'>Enviar</button>
+        <button className='boton-form-update' type='submit'>Enviar</button>
       </form>
     </>
   );

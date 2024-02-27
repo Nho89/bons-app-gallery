@@ -54,3 +54,15 @@ body {
     margin-top: 0;
     margin-bottom: 10px;
 }
+
+
+.boton-form-update {
+    background-color: #F69E92;
+    color: #000000;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 6px;
+    font-family: Poppins;
+}

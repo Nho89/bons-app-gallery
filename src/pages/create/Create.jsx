@@ -66,7 +66,7 @@ const changeUploadImage = async (e) => {
         <input type='date' className="label-form" name="abonado" id="abonado" {...register("abonado")} required/>
       
         <label htmlFor="notas">Notas</label>
-        <input className="label-form-notas" type="text" name="notas" id="notas" {...register("notas")} placeholder=""/>
+        <textarea className="label-form-notas" type="text" name="notas" id="notas" {...register("notas")} placeholder=""/>
 
         <button style={{width: "25vw", backgroundColor:"#F69E92", color: "#000000", padding:"6px", borderRadius:"10px", fontFamily: 'Poppins', fontSize: "1rem", border: "none", boxShadow: "0 2px 4px rgba(0,0,0,0.2)", width: "90%", marginBottom: "10%"  }} className="boton-form" type='submit'>Enviar</button>
          
