@@ -2,66 +2,66 @@
   "bonsais": [
     {
       "especie": "Acebuche",
-      "abonado": "5-7-2023",
-      "trasplantado": "2-5-2023",
+      "abonado": "2023-07-05",
+      "trasplantado": "2023-05-02",
       "image": "./src/assets/images/Acebuche2.png",
-      "id": "2",
-      "text": "esto es un texto de prueba"
-    },
-    {
-      "especie": "Arces",
-      "abonado": "5-2-2024",
-      "trasplantado": "18-6-2020",
-      "image": "./src/assets/images/bosque-arces.png",
-      "id": "3"
+      "notas": "El bonsái Acebuche, originario del Mediterráneo, destaca por su corteza retorcida y hojas pequeñas. Su resistencia lo hace ideal para el cultivo en condiciones adversas, requiriendo poda regular y cuidado en el riego para mantener su forma compacta.",
+      "id": "2"
     },
     {
       "especie": "Chaenomeles",
-      "abonado": "5-6-2023",
-      "trasplantado": "5-4-2023",
+      "abonado": "2023-06-05",
+      "trasplantado": "2023-04-05",
       "image": "./src/assets/images/chaenomeles.png",
+      "notas": "El bonsái Chaenomeles, también conocido como membrillero japonés, es apreciado por sus flores llamativas y frutos pequeños. Originario de Asia, este árbol es resistente y se destaca por su fácil cultivo, ideal para principiantes en el arte del bonsái.",
       "id": "4"
     },
     {
       "especie": "Junípero",
-      "abonado": "12-1-2024",
-      "trasplantado": "18-11-2019",
+      "abonado": "2024-01-12",
+      "trasplantado": "2019-11-18",
       "image": "./src/assets/images/junipero.png",
+      "notas": "El bonsái Junípero destaca por su follaje denso y su resistencia, simbolizando longevidad. Originario de varias regiones del mundo, su cuidado requiere poda regular y suelo bien drenado.",
       "id": "5"
     },
     {
       "especie": "Junípero Nana",
-      "abonado": "20-7-2023",
-      "trasplantado": "28-3-2019",
+      "abonado": "2023-07-20",
+      "trasplantado": "2019-03-28",
       "image": "./src/assets/images/juniperonana.png",
+      "notas": "El bonsái Junípero Nana es conocido por su tamaño compacto y follaje verde intenso. Originario de Asia y Europa, este junípero enano es ideal para espacios reducidos y su cuidado implica poda regular y exposición al sol directo.",
       "id": "6"
     },
     {
       "especie": "Pino Blanco",
-      "abonado": "5-1-2024",
-      "trasplantado": "18-4-2021",
+      "abonado": "2024-01-05",
+      "trasplantado": "2021-04-18",
       "image": "./src/assets/images/pinoblanco.png",
+      "notas": "El bonsái Pino Blanco, caracterizado por sus agujas largas y flexibles y su corteza blanca y suave, es originario de América del Norte. Requiere cuidados especiales como una buena ventilación y protección contra heladas. ",
       "id": "7"
     },
     {
       "especie": "Sabina",
-      "abonado": "5-5-2023",
-      "trasplantado": "6-6-2020",
+      "abonado": "2023-05-05",
+      "trasplantado": "2020-06-06",
       "image": "./src/assets/images/sabina.png",
+      "notas": "La sabina, conocida por su corteza escamosa y su forma retorcida, es un bonsái emblemático de los paisajes montañosos. Originaria de Europa y Asia, requiere cuidados específicos como exposición al sol y suelo bien drenado.",
       "id": "8"
     },
     {
       "especie": "Sabina",
-      "abonado": "29-6-2023",
-      "trasplantado": "18-4-2020",
+      "abonado": "2023-06-29",
+      "trasplantado": "2020-04-18",
       "image": "./src/assets/images/sabina2.png",
+      "notas": "El bonsái Sabina destaca por su aspecto antiguo y su resistencia a condiciones adversas. Su follaje verde oscuro y su forma característica lo hacen ideal para paisajes rocosos y su cuidado incluye poda regular y protección contra heladas.",
       "id": "9"
     },
     {
       "especie": "Sabina",
-      "abonado": "16-3-2023",
-      "trasplantado": "19-3-2020",
+      "abonado": "2023-03-16",
+      "trasplantado": "2020-03-19",
       "image": "./src/assets/images/sabina3.png",
+      "notas": "El bonsái Sabina, con su corteza rugosa y su hábito de crecimiento torcido, evoca la fuerza y la resistencia de la naturaleza. ",
       "id": "10"
     }
   ]

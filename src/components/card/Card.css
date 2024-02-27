@@ -1,6 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
     margin: 0;
     font-family: system-ui;
+    padding: 0;
 
 }
+.card-bonsai-container{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    font-family: 'Poppins', system-ui;
+    margin-top: 5%;
+}
+.card-box-turquoise{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #044C40;
+    border-radius: 20px;
+    width: 100%;
+    /* margin-bottom: 20px; */
+}
+.image-bonsai{
+    width: 100%;
+    /* height: 60%; */
+    text-align: center;
+}
+.title-card-box{
+    color: #F6F0BE;
+    font-size: 3rem;
+}
+.card-text{
+    display: flex;
+    justify-content: center;
+    gap: 40%;
+    text-align: left;
+    margin-left: 0;
+    color: #F6F0BE;
+    font-size: 1.2rem;
+}
+.dates-card-input{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.date-text{
+    background-color: #F6F0BE;
+    border-radius: 20px;
+    width: 35vw;
+    font-size: 1.1rem;
+}
+.buttons-card-detail{
+    width: 25vw;
+    background-color: #F69E92;
+    color: #000000;
+    padding: 6px;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.buttons-card-modified {
+    width: 25vw;
+    background-color: #F4DC5E;
+    color: #000000;
+    padding: 6px;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.buttons-card-delete{
+    width: 25vw;
+    background-color: #000000 ;
+    color: #F6F0BE;
+    padding: 6px;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (min-width: 768px) {
 
+    .card-bonsai-container{
+        
+        padding: 20px;
+    }
+    .card-box-turquoise{
+        display: grid;
+        grid-template-columns: 48% 48%;
+        gap: 4%;
+        padding: 10px;
+    }
+    .buttons-card-delete{
+        width: 15vw;
+    }
+}

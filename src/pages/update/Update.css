@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     box-sizing: border-box
 }
 
@@ -10,7 +10,7 @@ body {
 
 }
 
-.title-bonsais{
+.title-bonsais {
     font-family: "Berkshire Swash", serif;
     font-weight: 400;
     font-style: normal;
@@ -25,21 +25,32 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    padding-left: 8vw;
-    padding-top: 5vh;
     background-color: #044C40;
-    border-radius: 20px;
-    width: 100vw;
+    border-radius: 20px 20px 0 0 ;
+    width: 100%;
 
 }
 
 .label-form {
-    height: 6vh;
+    height: 5vh;
     border-radius: 10px;
     width: 90%;
+    margin-bottom: 0;
 }
 
 .label-form-notas {
     width: 90%;
-    height: 30vh;
+    height: 20vh;
+    box-sizing: border-box;
+    text-align: justify;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: auto;
+    margin-top: auto;
+}
+.span-error{
+    color: red;
+    margin-top: 0;
+    margin-bottom: 10px;
 }

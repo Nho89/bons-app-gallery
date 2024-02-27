@@ -2,7 +2,7 @@ import React from 'react'
 import {AiOutlineClose} from "react-icons/ai"
 import './Modal.css'
 
-const Modal = ({isOpen, closeModal}) => {
+const Modal = ({isOpen, closeModal, notas}) => {
   if (!isOpen) return null;
   return (
       <div className='modal'><AiOutlineClose
@@ -12,9 +12,8 @@ const Modal = ({isOpen, closeModal}) => {
         cursor={"pointer"}
         />
         <div className="container">
-          <h3>Detalles de la planta:</h3><br />
-          
-          <p>Texto</p>
+          <h3 className='subtitle-notas-bonsai'>Detalles de la planta:</h3><br />
+          <p className='notas-bonsai'>{notas}</p>
         </div>
       </div>
   )}

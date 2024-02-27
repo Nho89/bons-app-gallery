@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
     <h1 className='title-bonsais'>Mis  Bonsáis </h1>
-    <div style={{textAlign:"center", minHeight:"100vh"}}>
+    <div >
       <Card bonsais={bonsais}/>
       </div>
     </>

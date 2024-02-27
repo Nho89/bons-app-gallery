@@ -1,14 +1,19 @@
 import React from 'react'
 import {deleteData} from '../services/bonsaisServe'
+import { useNavigate } from 'react-router-dom'
+import "../components/card/Card.css"
 
 const Delete = ({id}) => {
-  console.log(id)
+  const navigate = useNavigate()
+  /* console.log(id) */
   const bonsaiDelete = () => {
-    deleteData(id)}
+    deleteData(id)
+    navigate(0)  
+  }
   return (
     <>
     <div>
-        <button style={{padding:"6px"}} onClick={bonsaiDelete}>Borrar</button>
+        <button className='buttons-card-delete'  onClick={bonsaiDelete}>Borrar</button>
     </div>
     </>
   )

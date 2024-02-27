@@ -1,9 +1,11 @@
 import axios from "axios";
 
+const url = 'http://localhost:3000'
+
 //GET
 
 export const getData = async () => {
-    const response = await fetch('http://localhost:3000/bonsais');
+    const response = await fetch(`${url}/bonsais`);
     const data = await response.json();
     return data;
   };
@@ -11,32 +13,34 @@ export const getData = async () => {
   //POST
 
   export const postData = async (data) =>{
-  axios.post('http://localhost:3000/bonsais',data)
-  
-  return(data)
+  const bonsais = await axios.post(`${url}/bonsais`,data)
+  alert("Bonsai creado exitosamente")
+  return bonsais
 }
-
-  //UPDATE
-  export  const updateData = async () =>{
-  }
-
-  //DELETE
+ //DELETE
   export const deleteData = async (id) =>{
-    if(confirm("¿Estás seguro que quieres eliminar este bonsai?") === true)
-    await fetch(`http://localhost:3000/bonsais/${id}`,{method:"DELETE"})
-    await getData();
-    location.reload();
+    if(confirm("¿Estás seguro que quieres eliminar este bonsai?") === true){
+      const bonsais = await axios.delete(`${url}/bonsais/${id}`)
+    return bonsais; }
   }
+  //UPDATE
+   export const updateData = async (id, newData) => {
+    console.log("modificando");
+      const response = await fetch(`${url}/bonsais/${id}`, {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newData)
+      });
+      const data = await response.json();
+    return data;
+  };
 
-
-  // //POST IMAGE CLOUDINARY
-  // export const uploadImage = async () =>{
-  //   const response = await axios.post(
-  //     "https://api.cloudinary.com/v1_1/dputvv9bi/image/upload", 
-  //     data)
-  // }
-  
-  // const response = await axios.post(
-  //   "https://api.cloudinary.com/v1_1/dputvv9bi/image/upload", 
-  //   data
-  // );
+ 
+//Get by id
+  export const getBonsaiById = async (id) => {
+  const response = await fetch(`${url}/bonsais/${id}`);
+  const data = await response.json();
+  return data;
+};

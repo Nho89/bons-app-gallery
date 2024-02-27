@@ -1,0 +1,37 @@
+.contain-menu{
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .navbar {
+        background-color: #044C40;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       /*  padding: 2% 0 2% 10%; */
+    }
+
+    .contain-menu {
+        list-style: none;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        width: 40%;
+        display: flex;
+        color: #F6F0BE;
+        font-size: 1rem;
+        text-align: end;
+        justify-content: space-between;
+    }
+    .add-nav{
+        display: none;
+    }
+    .logo-nav{
+        text-decoration: none;
+    }
+    .header-text{
+        text-decoration: none;
+        color: #F6F0BE;
+    }
+}
