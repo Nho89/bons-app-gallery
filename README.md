@@ -1,3 +1,6 @@
+# BonsApp Gallery | React.js 📝⚛️
+App made to practice the CRUD (Create, Read, Update and Delete) of React.js with Node.js.
+
 #   Objetiv proyect
 - For this project, the front-end development of a data management web application must be carried out.
 - The application must be made with React and must make CRUD requests over a mock API.
@@ -30,3 +33,37 @@ Currently, two official plugins are available:
  -  Raquel Lores  https://github.com/RaquelLores
  -  Desirée Carrizosa  https://github.com/DesireeCSilva
  - Nhoeli Salazar https://github.com/Nho89
+
+
+
+
+📝 Contact Me
+💻 Check my website
+How To Use👨‍💻
+To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer. From your command line:
+
+# Clone this repository
+$ git clone https://github.com/GonzaloMB/To-Do-List-React.js
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
+
+# Acknowledgements🚀
+
+JSX
+Componentes
+Props and Events
+Hooks
+useState
+useEffect
+useRef
+LocalStorage
+Built With 🛠️
+React.js
+HTML
+CSS
+Node.js
+NPM
