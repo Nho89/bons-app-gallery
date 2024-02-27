@@ -19,6 +19,7 @@ body {
 }
 
 .card-box-turquoise{
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,13 +27,21 @@ body {
     background-color: #044C40;
     border-radius: 20px;
     width: 100%;
-    /* margin-bottom: 20px; */
 }
-
-.image-bonsai{
+/* .card-container-img{
+    background-image: url('../../assets/images/frame-img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 100%;
+} */
+.card-container-img img{
     width: 100%;
-    /* height: 60%; */
-    text-align: center;
+}
+.image-bonsai{
+    
+    /* height: auto; */
 }
 
 .title-card-box{
