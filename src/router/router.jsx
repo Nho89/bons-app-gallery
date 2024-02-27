@@ -11,9 +11,9 @@ const router = createBrowserRouter([
       element: <LayoutPublic/>,
       children:[
         {
-          path: "/",
-     element:  <Home/>,
-          loader: getData
+      path: "/",
+      element:  <Home/>,
+      loader: getData
         },
         {
       path:"/create",

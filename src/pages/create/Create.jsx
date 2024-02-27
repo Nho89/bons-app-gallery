@@ -27,7 +27,6 @@ const changeUploadImage = async (e) => {
     data.append("file", file);
     data.append("upload_preset","preset_bonsai");
 
-
     const response = await axios.post(
       "https://api.cloudinary.com/v1_1/dputvv9bi/image/upload", 
       data
