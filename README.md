@@ -1,4 +1,4 @@
-# BonsApp Gallery | React.js 📝⚛️
+# BonsApp Gallery | React.js https://iconos8.es/icon/3R5LT7W45VT7/bons%C3%A1i⚛️
 App made to practice the CRUD (Create, Read, Update and Delete) of React.js with Node.js.
 
 #   Objetiv proyect
