@@ -19,8 +19,8 @@ const Card = ({bonsais}) => {
       
         
       
-        <div className= 'card-box-turquoise' >
-          <div>
+        <div className= 'card-bonsai-container' >
+          <div className='card-container-img'>
               <img className='image-bonsai' src={bonsai.image} alt="La imagen del bonsai que sube el usuario" ></img>
           </div>
           <div className='box-card'>
@@ -39,7 +39,7 @@ const Card = ({bonsais}) => {
               </div>
             </div>
             <div className='card-buttons' style={{display: "flex", marginTop:"20px", marginBottom:"40px", gap:"10px"}}>
-              <button className='buttons-card-detail' onClick={()=> setIsModalOpen(true)}>Detalles</button>
+              <button className='buttons-card-detail' onClick={()=> setIsModalOpen(true)}>Descripción</button>
               <button className='buttons-card-modified'  type="button" onClick = {()=>navigate(`/update/${bonsai.id}`)}>Modificar</button>
               <Delete  id={bonsai.id}/>
             </div>
