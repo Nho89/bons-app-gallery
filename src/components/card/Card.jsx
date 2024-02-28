@@ -17,8 +17,6 @@ const Card = ({bonsais}) => {
         return(
       <div key={bonsai.id} /* bonsai={bonsai} */ className='card-bonsai-container'>
       
-        
-      
         <div className= 'card-bonsai-container' >
           <div className='card-container-img'>
               <img className='image-bonsai' src={bonsai.image} alt="La imagen del bonsai que sube el usuario" ></img>

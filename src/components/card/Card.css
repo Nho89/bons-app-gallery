@@ -14,7 +14,7 @@ body {
     flex-direction: column;
     gap: 20px;
     font-family: 'Poppins', system-ui;
-    margin-top: 0;
+    margin-top: 2%;
     /* background-color: #044C40; */
     border-radius: 20px;
 }
@@ -112,19 +112,29 @@ body {
 @media only screen and (min-width: 768px) {
 
     .card-bonsai-container{
-        
+        display: flex;
+        flex-direction: row;
         padding: 20px;
     }
+
+    .green-box {
+    background-color: #044C40;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 20px;
+    width: 60%;
+    }
+
     .card-box-turquoise{
         display: grid;
         grid-template-columns: 48% 48%;
         gap: 4%;
         padding: 10px;
     }
+    
     .buttons-card-delete{
-        width: 20vw;
+        width: 15vw;
     }
-
         .card-text {
             display: flex;
             /* justify-content: center; */
