@@ -43,8 +43,6 @@ export const getData = async () => {
   const data = await response.json();
   return data;
 };
-<<<<<<< HEAD
-=======
 
 /* export const modifiedImage = async (image,id)=>{
 const response = await axios.put(
@@ -53,4 +51,3 @@ const response = await axios.put(
     );
     setUrl_Imagen(response.data.secure_url);
     console.log(response.data);} */
->>>>>>> 67ba8cea1984e64cbc47260be55c49edf5563d67
