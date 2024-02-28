@@ -31,9 +31,11 @@ const Card = ({bonsais}) => {
         
             <div className='dates-card-input' >
               <div  className='date-text' >
+                <img className='icon-trasplantado' src='../src/assets/logo-trasplantar.svg' alt='icono trasplantado' />
                 <p>{bonsai.trasplantado}</p>
               </div>
               <div className='date-text' >
+                      <img className='icon-abonado' src='../src/assets/logo-abonado.svg' alt='icono abonado' />
                 <p>{bonsai.abonado}</p>
               </div>
             </div>

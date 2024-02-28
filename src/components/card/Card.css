@@ -64,18 +64,35 @@ body {
 
 .dates-card-input{
     display: flex;
-    gap: 25px;
+    flex-direction: row;
+    gap: 15px;
     align-items: center;
-    margin-left: 2%;
 }
 
 .date-text{
+    display: flex;
+    gap: 5%;
     background-color: #F6F0BE;
     border-radius: 20px;
     width: 35vw;
-    font-size: 1.1rem;
-    
+    font-size: 1rem;
+    width: 100%; 
 }
+
+.icon-trasplantado{
+    margin-left: 2%;
+    margin-top: 4%;
+    width: 25%;
+    height: 25%;
+}
+
+.icon-abonado {
+    margin-left: 6%;
+    margin-top: 7%;
+    width: 20%;
+    height: 20%;
+}
+
 .buttons-card-detail{
     width: 25vw;
     background-color: #F69E92;
@@ -136,13 +153,35 @@ body {
         width: 15vw;
     }
 
-     .card-text {
+    .date-text {
+        font-size: 1.3rem;
+    }
+
+    .icon-trasplantado {
+        margin-left: 18%;
+        margin-top: 3%;
+        width: 15%;
+        height: 15%;
+    }
+
+    .icon-abonado {
+        margin-left: 18%;
+        margin-top: 4%;
+        width: 15%;
+        height: 15%;
+    }
+
+    .card-text {
         display: flex;
         /* justify-content: center; */
         gap: 45%;
-        /* text-align: left; */
+         /* text-align: left; */
         margin-left: 15%;
         color: #F6F0BE;
         font-size: 1.2rem;
-        }
+    }
+
+    .dates-card-input {
+        margin-left: 0;
+    }
 }
