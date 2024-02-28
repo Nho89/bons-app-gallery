@@ -3,22 +3,6 @@ import './Update.css';
 import { useForm } from 'react-hook-form';
 import { updateData, getBonsaiById } from '../../services/bonsaisServe';
 import { useParams, useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
-
-const Update = () => {
-const {id} = useParams();
-const navigate = useNavigate();
-const { register, handleSubmit, formState: {errors} } = useForm()
-
-//Función que se ejecuta al enviar el formulario
-const onSubmit = async (newData) => {
-  try {
-    await updateData(id, newData);
-    console.log("Datos actualizados correctamente");
-    navigate('/');
-  } catch (error) {
-    console.error("Error al actualizar los datos:", error);
-=======
 import axios from "axios";
 
 const Update = () => {
@@ -75,32 +59,10 @@ const Update = () => {
     console.log(response.data);
   } catch (error) {
     console.error("Error al cargar la imagen a Cloudinary:", error);
->>>>>>> 67ba8cea1984e64cbc47260be55c49edf5563d67
   }
 };
   return (
     <>
-<<<<<<< HEAD
-    <form className= 'container-form'onSubmit={handleSubmit(onSubmit)}>
-    <h1 className='title-bonsais'>Modificar Bonsai</h1>
-
-    <div>
-      <input type="file" style={{color: "transparent"}} id="image" required/><br/>
-    </div>
-    
-      <label htmlFor="especie">Especie:</label>
-      <input type="text" id="especie" {...register('especie',{required:'Este campo es obligatorio'})}/><br/>
-      <label htmlFor="trasplantado">Trasplantado:</label>
-      <input type="date" id="trasplantado" {...register('trasplantado')}/><br/>
-      <label htmlFor="abonado">Abonado:</label>
-      <input type="date" id="abonado"{...register('abonado')}/><br/>
-      <label htmlFor="notas">Notas</label>
-      <input className="label-form-notas" id="notas"{...register('notas')} type="text" name="notas" placeholder=""/>
-{errors.especie && <p>Introduce una especie{errors.especie.message}</p>}
-<button className="boton-form" type='submit' onClick={handleSubmit(onSubmit)}>Enviar</button>
-</form>
-</>
-=======
     <h1 className='title-bonsais'>Modificar mi bonsái</h1>
     <div  className="container-update">
       <form className='container-form-update' onSubmit={handleSubmit(onSubmit)}> 
@@ -142,7 +104,6 @@ const Update = () => {
       </form>
     </div>
     </>
->>>>>>> 67ba8cea1984e64cbc47260be55c49edf5563d67
   );
 };
 

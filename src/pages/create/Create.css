@@ -66,8 +66,6 @@ body {
     outline: none
 }
 
-<<<<<<< HEAD
-=======
 input[type="date"]::-webkit-calendar-picker-indicator {
     background: url('../../assets/logo-calendar.png') no-repeat;
     background-size: cover;
@@ -113,4 +111,3 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding: 10px;
     }
 }
->>>>>>> 67ba8cea1984e64cbc47260be55c49edf5563d67
