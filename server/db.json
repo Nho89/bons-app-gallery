@@ -1,11 +1,11 @@
 {
   "bonsais": [
     {
-      "image": "https://res.cloudinary.com/dputvv9bi/image/upload/v1709029556/bonsai_app_images/lob0ye5ee7stjyuzuojd.png",
       "especie": "Acebuche",
       "trasplantado": "2023-05-02",
       "abonado": "2023-07-05",
-      "notas": "El bonsái Acebuche, originario del Mediterráneo, destaca por su corteza retorcida y hojas pequeñas. Su resistencia lo hace ideal para el cultivo en condiciones adversas, requiriendo poda regular y cuidado en el riego para mantener su forma compacta.",
+      "notas": "El bonsái Acebuche, originario del Mediterráneo, destaca por su corteza retorcida y hojas pequeñas. Su resistencia lo hace ideal para el cultivo en condiciones adversas, requiriendo poda regular y cuidado en el riego para mantener su forma compacta.ff",
+      "image": "https://res.cloudinary.com/dputvv9bi/image/upload/v1709116774/bonsai_app_images/bkktbsspvq55pytzi3ri.png",
       "id": "2"
     },
     {
@@ -57,12 +57,20 @@
       "id": "9"
     },
     {
-      "image": "https://res.cloudinary.com/dputvv9bi/image/upload/v1709029775/bonsai_app_images/jnnyuzh6anpy13fdzclz.png",
-      "especie": "Sabina",
+      "especie": "Sabinas",
       "trasplantado": "2020-03-19",
       "abonado": "2023-03-16",
       "notas": "El bonsái Sabina, con su corteza rugosa y su hábito de crecimiento torcido, evoca la fuerza y la resistencia de la naturaleza. ",
+      "image": "https://res.cloudinary.com/dputvv9bi/image/upload/v1709063525/bonsai_app_images/opkitcqcilgvxmpohjtq.png",
       "id": "10"
+    },
+    {
+      "id": "4e54",
+      "image": "https://res.cloudinary.com/dputvv9bi/image/upload/v1709117232/bonsai_app_images/mgotsytlfomkefz6vmc8.png",
+      "especie": "soy un bonsai",
+      "trasplantado": "2024-02-14",
+      "abonado": "2024-02-08",
+      "notas": "Hola soy un bonsai"
     }
   ]
 }

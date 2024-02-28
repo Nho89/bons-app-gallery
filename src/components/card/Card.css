@@ -13,31 +13,38 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 0px;
+    gap: 20px;
     font-family: 'Poppins', system-ui;
     margin-top: 5%;
-}
-
-.card-box-turquoise{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: #044C40;
     border-radius: 20px;
-    width: 100%;
-    /* margin-bottom: 20px; */
 }
 
-.image-bonsai{
+.card-container-img{
+    background-image: url('../../assets/images/frame-img.png');
     width: 100%;
-    /* height: 60%; */
-    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:  400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #044C40;
+}
+
+.card-container-img img{
+    width: 380px;
+    height: 289px;
+    object-fit: cover;
+      
 }
 
 .title-card-box{
+    margin: 0;
     color: #F6F0BE;
     font-size: 3rem;
+    margin-top: 5%;
 }
 
 .card-text{
@@ -61,6 +68,7 @@ body {
     border-radius: 20px;
     width: 35vw;
     font-size: 1.1rem;
+    
 }
 .buttons-card-detail{
     width: 25vw;
