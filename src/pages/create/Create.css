@@ -9,12 +9,12 @@ body {
 
 }
 
-.title-bonsais {
+.title-bonsai-create {
     font-family: "Berkshire Swash", serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 3rem;
 }
 
 .container-form-create {
@@ -36,7 +36,7 @@ body {
     gap: 5px;
 }
 
-.label-form {
+.label-form-create {
     height: 8vh;
     border-radius: 10px;
     width: 90%;
@@ -44,7 +44,7 @@ body {
     border: none;
     outline: none;
     position: relative; 
-    color: transparent;
+    /* color: transparent; */
 }
 
 .label-form-notas {
@@ -76,7 +76,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer; 
     position: absolute; 
     top: 50%; 
-    left: 5px; 
+    left: 300px; 
     transform: translateY(-50%); 
 }
 
@@ -88,6 +88,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         width: 70%;
         padding: 0;
         border-radius: 20px;
+        padding-top: 2%;
     }
     .container-create{
         display: flex;
@@ -110,4 +111,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .form-right-create{
         padding: 10px;
     }
+    .title-bonsai-create {
+        font-size: 4rem;
+    }
+    
 }

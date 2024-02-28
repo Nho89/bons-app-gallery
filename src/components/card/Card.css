@@ -135,13 +135,14 @@ body {
     .buttons-card-delete{
         width: 15vw;
     }
-        .card-text {
-            display: flex;
-            /* justify-content: center; */
-            gap: 50%;
-            /* text-align: left; */
-            margin-left: 18%;
-            color: #F6F0BE;
-            font-size: 1.2rem;
+
+     .card-text {
+        display: flex;
+        /* justify-content: center; */
+        gap: 45%;
+        /* text-align: left; */
+        margin-left: 15%;
+        color: #F6F0BE;
+        font-size: 1.2rem;
         }
 }

@@ -34,7 +34,7 @@ const changeUploadImage = async (e) => {
 };
       return (
         <div  className="container-create">
-         <h1 className='title-bonsais'>Añadir Bonsai</h1>
+         <h1 className='title-bonsai-create'>Añadir Bonsai</h1>
 
           <form className='container-form-create' onSubmit={handleSubmit(onSubmit)}>
               <div className='form-left-create'>
@@ -57,13 +57,13 @@ const changeUploadImage = async (e) => {
         
         <div className='form-right-create'>
          <label htmlFor="especie">Especie:</label>
-        <input className="label-form" type='text' {...register("especie", { required: true })} required/>
+        <input className="label-form-create" type='text' {...register("especie", { required: true })} required/>
 
         <label htmlFor="trasplantado">Trasplantado</label>
-        <input className="label-form" id='trasplantado' type='date' {...register("trasplantado", { required: true })} required />
+        <input className="label-form-create" id='trasplantado' type='date' {...register("trasplantado", { required: true })} required />
 
         <label  htmlFor="abonado">Abonado</label>
-        <input type='date' className="label-form" name="abonado" id="abonado" {...register("abonado")} required/>
+        <input type='date' className="label-form-create" name="abonado" id="abonado" {...register("abonado")} required/>
       
         <label htmlFor="notas">Descripción</label>
         <textarea className="label-form-notas" type="text" name="notas" id="notas" {...register("notas")} placeholder=""/>
