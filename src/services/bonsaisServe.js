@@ -11,6 +11,7 @@ export const getData = async () => {
   };
 
   //POST
+
   export const postData = async (data) =>{
   const bonsais = await axios.post(`${url}/bonsais`,data)
   alert("Bonsai creado exitosamente")
