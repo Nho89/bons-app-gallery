@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <>
-    <h1 className='title-bonsais'>Mis  Bonsáis </h1>
+    <h1 className='title-bonsai'>Mis  Bonsáis </h1>
     <div >
       <Card bonsais={bonsais}/>
       </div>

@@ -25,7 +25,6 @@ const changeUploadImage = async (e) => {
     data.append("file", file);
     data.append("upload_preset","preset_bonsai");
 
-
     const response = await axios.post(
       "https://api.cloudinary.com/v1_1/dputvv9bi/image/upload", 
       data
@@ -35,7 +34,7 @@ const changeUploadImage = async (e) => {
 };
       return (
         <div  className="container-create">
-         <h1 className='title-bonsais'>Añadir Bonsai</h1>
+         <h1 className='title-bonsai-create'>Añadir Bonsai</h1>
 
           <form className='container-form-create' onSubmit={handleSubmit(onSubmit)}>
               <div className='form-left-create'>
@@ -51,21 +50,22 @@ const changeUploadImage = async (e) => {
       
       {/* {
         errors.image && <span>Imagen requerida</span>
-      } */}
-    
+      }
+     */}
+     
       <br />
         </div>
         
         <div className='form-right-create'>
          <label htmlFor="especie">Especie:</label>
         <input className="label-form-create" type='text' {...register("especie", { required: true })} required/>
-
+        <div className='dates-input-create'>
         <label htmlFor="trasplantado">Trasplantado</label>
         <input className="label-form-create" id='trasplantado' type='date' {...register("trasplantado", { required: true })} required />
-
+       
         <label  htmlFor="abonado">Abonado</label>
         <input type='date' className="label-form-create" name="abonado" id="abonado" {...register("abonado")} required/>
-      
+        </div>
         <label htmlFor="notas">Descripción</label>
         <textarea className="label-form-notas" type="text" name="notas" id="notas" {...register("notas")} placeholder=""/>
 

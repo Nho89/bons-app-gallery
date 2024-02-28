@@ -17,12 +17,11 @@ const Card = ({bonsais}) => {
         return(
       <div key={bonsai.id} /* bonsai={bonsai} */ className='card-bonsai-container'>
       
-        
-      
         <div className= 'card-bonsai-container' >
           <div className='card-container-img'>
               <img className='image-bonsai' src={bonsai.image} alt="La imagen del bonsai que sube el usuario" ></img>
           </div>
+          <div className='green-box'>
           <div className='box-card'>
             <h3 className='title-card-box' >{bonsai.especie}</h3>
             <div className='card-text' >
@@ -32,9 +31,11 @@ const Card = ({bonsais}) => {
         
             <div className='dates-card-input' >
               <div  className='date-text' >
+                <img className='icon-trasplantado' src='../src/assets/logo-trasplantar.svg' alt='icono trasplantado' />
                 <p>{bonsai.trasplantado}</p>
               </div>
               <div className='date-text' >
+                      <img className='icon-abonado' src='../src/assets/logo-abonado.svg' alt='icono abonado' />
                 <p>{bonsai.abonado}</p>
               </div>
             </div>
@@ -44,7 +45,7 @@ const Card = ({bonsais}) => {
               <Delete  id={bonsai.id}/>
             </div>
               <Modal isOpen = {isModalOpen} closeModal={()=> setIsModalOpen(false)} notas={bonsai.notas}/>
-
+                </div>
             </div>
           </div>
           
