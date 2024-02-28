@@ -97,9 +97,15 @@ body {
         justify-content: center;
         width: 100%;
     }
+    .container-update{
+        width: 70%;
+    }
     
+<<<<<<< HEAD
     /* .container-update{
         display: flex;
     } */
 >>>>>>> 67ba8cea1984e64cbc47260be55c49edf5563d67
+=======
+>>>>>>> f43d59449f3cae82c1749bc59da82b28d20a7932
 }
