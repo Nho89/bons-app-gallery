@@ -58,13 +58,13 @@ const changeUploadImage = async (e) => {
         
         <div className='form-right-create'>
          <label htmlFor="especie">Especie:</label>
-        <input className="label-form" type='text' {...register("especie", { required: true })} required/>
+        <input className="label-form-create" type='text' {...register("especie", { required: true })} required/>
 
         <label htmlFor="trasplantado">Trasplantado</label>
-        <input className="label-form" id='trasplantado' type='date' {...register("trasplantado", { required: true })} required />
+        <input className="label-form-create" id='trasplantado' type='date' {...register("trasplantado", { required: true })} required />
 
         <label  htmlFor="abonado">Abonado</label>
-        <input type='date' className="label-form" name="abonado" id="abonado" {...register("abonado")} required/>
+        <input type='date' className="label-form-create" name="abonado" id="abonado" {...register("abonado")} required/>
       
         <label htmlFor="notas">Descripción</label>
         <textarea className="label-form-notas" type="text" name="notas" id="notas" {...register("notas")} placeholder=""/>
