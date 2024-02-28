@@ -63,7 +63,7 @@ const Update = () => {
 };
   return (
     <>
-    <h1 className='title-bonsais'>Modificar mi bonsái</h1>
+    <h1 className='title-bonsai-update'>Modificar mi bonsái</h1>
     <div  className="container-update">
       <form className='container-form-update' onSubmit={handleSubmit(onSubmit)}> 
 
@@ -71,12 +71,12 @@ const Update = () => {
         <div className='form-update-left' >  
           <label htmlFor="image" ><p>Cambia la imagen de tu Bonsai</p><img  src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="imagen de un marco de fotos" /></label>
           <input id="image" type="file" style={{ color: "transparent", opacity: 0, position: "absolute" }}   onChange={changeUploadImage}/>
-            </div>   
-
+            <br /> 
           {Url_Imagen && (
               <div>
                 <img src={Url_Imagen}  alt="Imagen de mi bonsai" style={{maxWidth:"200px"}}/>
               </div>)}
+          </div>
 
         <div className='form-update-right'>
          

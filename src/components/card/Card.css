@@ -126,6 +126,7 @@ body {
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 @media only screen and (min-width: 768px) {
 
     .card-bonsai-container{
@@ -160,8 +161,8 @@ body {
     .icon-trasplantado {
         margin-left: 18%;
         margin-top: 3%;
-        width: 15%;
-        height: 15%;
+        width: 16%;
+        height: 16%;
     }
 
     .icon-abonado {

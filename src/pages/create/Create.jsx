@@ -50,8 +50,8 @@ const changeUploadImage = async (e) => {
       
       {/* {
         errors.image && <span>Imagen requerida</span>
-      } */}
-    
+      }
+     */}
       <br />
         </div>
         
