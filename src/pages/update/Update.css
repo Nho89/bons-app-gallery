@@ -24,17 +24,6 @@ body {
     color: #F6F0BE;
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-    align-content: center;
-    background-color: #044C40;
-    border-radius: 20px 20px 0 0 ;
-    width: 100%;
-
-}
-
-.label-form {
-    height: 5vh;
-=======
     justify-content: center;
     padding-left: 5%;
     background-color: #044C40;
@@ -47,7 +36,6 @@ body {
 }
 .label-form-update {
     height: 8vh;
->>>>>>> 67ba8cea1984e64cbc47260be55c49edf5563d67
     border-radius: 10px;
     width: 90%;
     margin-bottom: 0;
