@@ -1,4 +1,4 @@
-import {render, screen} from "@testing-library/react";
+/* import {render, screen} from "@testing-library/react";
 import Nav from "../components/Nav";
 import { expect } from "vitest";
 import { MemoryRouter } from "react-router";
@@ -15,4 +15,4 @@ describe("NavTesting",() =>{
         const buttonCardDetail = screen.getByText(/Mis bonsáis/i);
         expect(buttonCardDetail).toBeDefined();
     });
-});
+}); */

@@ -1,12 +1,18 @@
+import { beforeEach, test } from "vitest";
+import { expect } from "vitest";
 import {render, screen} from "@testing-library/react";
 import Card from "../components/card/Card";
-import { beforeEach, describe, expect } from "vitest";
+import { MemoryRouter } from "react-router";
+
+
 
 
 describe("Card testing",() =>{
 
     beforeEach(() =>{
-        render(<Card/>);
+        render(<MemoryRouter>
+            <Card/>
+        </MemoryRouter>)
     });
 
     test("render Card",() => {
