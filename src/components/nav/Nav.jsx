@@ -7,7 +7,7 @@ const Nav = () => {
   return (
     <>
     <nav className='navbar' style={{display: "flex", justifyContent: "space-between", padding:"20px"}} >
-        <Link to="/"  className='logo-nav'><img src="../src\assets\images\logo-bonsai.png" alt="logo" /></Link>
+        <Link to="/"  className='logo-nav'><img src="../src\assets\images\logo-bonsai-app-gallery.svg" alt="logo" /></Link>
         <ul className="contain-menu">
           <Link to="/" className="header-text"><li >Mis bonsáis</li></Link>
           <Link to="/create"  className="header-text"><li >Añadir</li></Link>

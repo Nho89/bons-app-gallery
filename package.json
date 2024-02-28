@@ -8,8 +8,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "api": "npx json-server server/db.json",
-    "test": "vitest"
+    "api": "npx json-server server/db.json"
   },
   "dependencies": {
     "axios": "^1.6.7",
