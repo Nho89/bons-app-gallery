@@ -115,5 +115,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .title-bonsai-create {
         font-size: 4rem;
     }
+
+    input[type="date"]::-webkit-calendar-picker-indicator { 
+        left: 89%;
+    }
     
 }
