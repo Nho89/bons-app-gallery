@@ -51,7 +51,7 @@ body {
     width: 90%;
     height: 20vh;
     box-sizing: border-box;
-    text-align: justify;
+    text-align: left;
     display: block;
     overflow: auto;
     margin-top: auto;

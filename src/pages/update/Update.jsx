@@ -85,7 +85,7 @@ const Update = () => {
             {errors.especie && <span className='span-error'>{errors.especie.message}</span>}
 
             <label htmlFor='trasplantado'>Trasplantado:</label>
-            <input type='date' className="label-form-update" id='trasplantado' {...register('trasplantado', { required: true })} /><br />
+            <input type='date' className="label-form-update"  id='trasplantado' {...register('trasplantado', { required: true })} /><br />
             {errors.trasplantado && <span className='span-error'> La fecha de trasplantado es requerida </span>}
 
             <label htmlFor='abonado'>Abonado:</label>
