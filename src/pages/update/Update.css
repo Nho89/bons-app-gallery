@@ -43,7 +43,7 @@ body {
     height: 8vh;
     border-radius: 10px;
     width: 90%;
-    margin-bottom: 0;
+    margin-bottom: 2%;
 }
 
 .label-form-notas {
@@ -61,8 +61,9 @@ body {
 .span-error{
     color: #F69E92;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
 }
+
 .boton-form-update {
     background-color: #F69E92;
     color: #000000;
@@ -100,7 +101,6 @@ body {
         padding: 3% 0 3% 10%;
         gap: 12%;
     }
-    
     .form-update-right{
         display: flex;
         flex-direction: column;
@@ -111,5 +111,5 @@ body {
     .container-update{
         width: 70%;
     }
-    
+
 }

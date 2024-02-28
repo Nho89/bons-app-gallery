@@ -57,7 +57,7 @@ const changeUploadImage = async (e) => {
         </div>
         
         <div className='form-right-create'>
-         <label htmlFor="especie">Especie:</label>
+        <label htmlFor="especie">Especie:</label>
         <input className="label-form-create" type='text' {...register("especie", { required: 'La especie es requerida' })}/>
         {errors.especie && <span className='span-error'>{errors.especie.message}</span>}
 
