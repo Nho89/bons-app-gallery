@@ -83,7 +83,7 @@ const Update = () => {
             <label htmlFor='especie'>Especie:</label>
             <input type='text' className="label-form-update" id='especie' {...register('especie', { required: 'La especie es requerida' })} /><br />
             {errors.especie && <span className='span-error'>{errors.especie.message}</span>}
-
+            <div className='dates-input-update'>
             <label htmlFor='trasplantado'>Trasplantado:</label>
             <input type='date' className="label-form-update"  id='trasplantado' {...register('trasplantado', { required: true })} /><br />
             {errors.trasplantado && <span className='span-error'> La fecha de trasplantado es requerida </span>}
@@ -91,6 +91,7 @@ const Update = () => {
             <label htmlFor='abonado'>Abonado:</label>
             <input type='date' className="label-form-update" id='abonado' {...register('abonado', { required: true })} /><br />
             {errors.abonado && <span className='span-error'> La fecha de abonado es requerida </span>}
+            </div>
 
             <label htmlFor='notas'>Descripción</label>
             <textarea className='label-form-notas' id='notas' {...register('notas', { required: true })} type='text' name='notas' placeholder='' />

@@ -103,6 +103,7 @@ body {
     font-size: 1rem;
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 .buttons-card-modified {
     width: 25vw;
@@ -114,6 +115,7 @@ body {
     font-size: 1rem;
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 .buttons-card-delete{
     width: 25vw;
@@ -125,6 +127,7 @@ body {
     font-size: 1rem;
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
