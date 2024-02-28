@@ -27,8 +27,9 @@
     .add-nav{
         display: none;
     }
-    .logo-nav{
+    .logo-nav img{
         text-decoration: none;
+        margin-left: 60%;
     }
     .header-text{
         text-decoration: none;
