@@ -23,6 +23,7 @@ const Card = ({bonsais}) => {
           <div className='card-container-img'>
               <img className='image-bonsai' src={bonsai.image} alt="La imagen del bonsai que sube el usuario" ></img>
           </div>
+          <div className='green-box'>
           <div className='box-card'>
             <h3 className='title-card-box' >{bonsai.especie}</h3>
             <div className='card-text' >
@@ -44,7 +45,7 @@ const Card = ({bonsais}) => {
               <Delete  id={bonsai.id}/>
             </div>
               <Modal isOpen = {isModalOpen} closeModal={()=> setIsModalOpen(false)} notas={bonsai.notas}/>
-
+                </div>
             </div>
           </div>
           

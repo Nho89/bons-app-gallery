@@ -14,11 +14,17 @@ body {
     flex-direction: column;
     gap: 20px;
     font-family: 'Poppins', system-ui;
-    margin-top: 5%;
-    background-color: #044C40;
+    margin-top: 0;
+    /* background-color: #044C40; */
     border-radius: 20px;
 }
 
+.green-box {
+    background-color: #044C40;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 20px;
+}
 .card-container-img{
     background-image: url('../../assets/images/frame-img.png');
     width: 100%;
@@ -29,7 +35,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #044C40;
+    /* background-color: #044C40; */
 }
 
 .card-container-img img{
@@ -48,10 +54,10 @@ body {
 
 .card-text{
     display: flex;
-    justify-content: center;
-    gap: 40%;
-    text-align: left;
-    margin-left: 0;
+    /* justify-content: center; */
+    gap: 20%;
+    /* text-align: left; */
+    margin-left: 5%;
     color: #F6F0BE;
     font-size: 1.2rem;
 }
@@ -60,6 +66,7 @@ body {
     display: flex;
     gap: 25px;
     align-items: center;
+    margin-left: 2%;
 }
 
 .date-text{
@@ -115,6 +122,16 @@ body {
         padding: 10px;
     }
     .buttons-card-delete{
-        width: 15vw;
+        width: 20vw;
     }
+
+        .card-text {
+            display: flex;
+            /* justify-content: center; */
+            gap: 50%;
+            /* text-align: left; */
+            margin-left: 18%;
+            color: #F6F0BE;
+            font-size: 1.2rem;
+        }
 }
