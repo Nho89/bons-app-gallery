@@ -23,26 +23,21 @@ body {
 .card-container-img{
     background-image: url('../../assets/images/frame-img.png');
     width: 100%;
-    /* height: 300px; */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* margin-top: 2%; */
     height:  400px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #044C40;
-    /* position: absolute; */
-    z-index:  1;
 }
 
 .card-container-img img{
     width: 380px;
     height: 289px;
     object-fit: cover;
-    z-index: -1;
-     
+      
 }
 
 .title-card-box{
