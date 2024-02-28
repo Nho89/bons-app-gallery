@@ -6,7 +6,9 @@
 body {
     margin: 0;
     font-family: system-ui;
+
 }
+
 .title-bonsais {
     font-family: "Berkshire Swash", serif;
     font-weight: 400;
@@ -15,7 +17,7 @@ body {
     font-size: 4.5rem;
 }
 
-.container-form {
+.container-form-create {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     color: #F6F0BE;
@@ -26,16 +28,23 @@ body {
     background-color: #044C40;
     border-radius: 20px 20px 0 0;
     width: 100%;
+    
+}
+.form-right-create{
+    display: flex;
+    flex-direction: column;
     gap: 5px;
 }
 
 .label-form {
-    height: 6%;
+    height: 8vh;
     border-radius: 10px;
     width: 90%;
     box-shadow: none;
     border: none;
     outline: none;
+    position: relative; 
+    color: transparent;
 }
 
 .label-form-notas {
@@ -57,3 +66,48 @@ body {
     outline: none
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url('../../assets/logo-calendar.png') no-repeat;
+    background-size: cover;
+    width: 20px; 
+    height: 20px;
+    border: none; 
+    margin-left: 9px;
+    cursor: pointer; 
+    position: absolute; 
+    top: 50%; 
+    left: 5px; 
+    transform: translateY(-50%); 
+}
+
+@media only screen and (min-width: 768px) {
+    .container-form-create{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 20px;
+        width: 70%;
+        padding: 0;
+        border-radius: 20px;
+    }
+    .container-create{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-left-create{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #F6F0BE; */
+    }
+    .container-image-create{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-right-create{
+        padding: 10px;
+    }
+}

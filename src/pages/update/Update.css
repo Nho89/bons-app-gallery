@@ -18,21 +18,24 @@ body {
     font-size: 4.5rem;
 }
 
-.container-form {
+.container-form-update {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     color: #F6F0BE;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    justify-content: center;
+    padding-left: 5%;
     background-color: #044C40;
     border-radius: 20px 20px 0 0 ;
-    width: 100%;
-
 }
-
-.label-form {
-    height: 5vh;
+.container-update{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.label-form-update {
+    height: 8vh;
     border-radius: 10px;
     width: 90%;
     margin-bottom: 0;
@@ -53,4 +56,35 @@ body {
     color: red;
     margin-top: 0;
     margin-bottom: 10px;
+}
+.boton-form-update {
+    background-color: #F69E92;
+    color: #000000;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 20vw;
+    padding: 6px;
+    font-family: Poppins;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+@media only screen and (min-width: 768px){
+    .container-form-update{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        place-items: center;
+        padding-top: 4%;
+    }
+    .form-update-right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .container-update{
+        width: 70%;
+    }
+    
 }

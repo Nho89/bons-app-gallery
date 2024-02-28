@@ -44,3 +44,11 @@ export const getData = async () => {
   const data = await response.json();
   return data;
 };
+
+/* export const modifiedImage = async (image,id)=>{
+const response = await axios.put(
+      "https://api.cloudinary.com/v1_1/dputvv9bi/image/upload",
+      data
+    );
+    setUrl_Imagen(response.data.secure_url);
+    console.log(response.data);} */
