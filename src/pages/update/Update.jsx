@@ -62,19 +62,24 @@ const Update = () => {
   }
 };
   return (
+    <>
+    <h1 className='title-bonsais'>Modificar mi bonsái</h1>
     <div  className="container-update">
-
-                <h1 className='title-bonsais'>Modificar mi bonsái</h1>
-
       <form className='container-form-update' onSubmit={handleSubmit(onSubmit)}> 
 
-          <label htmlFor="image" >Cambia la imagen de tu Bonsai<img  src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="imagen de un marco de fotos" /></label>
+
+        <div className='form-update-left' >  
+          <label htmlFor="image" ><p>Cambia la imagen de tu Bonsai</p><img  src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="imagen de un marco de fotos" /></label>
           <input id="image" type="file" style={{ color: "transparent", opacity: 0, position: "absolute" }}   onChange={changeUploadImage}/>
+            </div>   
+
           {Url_Imagen && (
               <div>
                 <img src={Url_Imagen}  alt="Imagen de mi bonsai" style={{maxWidth:"200px"}}/>
               </div>)}
-        
+
+        <div className='form-update-right'>
+         
             <label htmlFor='especie'>Especie:</label>
             <input type='text' className="label-form-update" id='especie' {...register('especie', { required: 'La especie es requerida' })} /><br />
             {errors.especie && <span className='span-error'>{errors.especie.message}</span>}
@@ -87,16 +92,18 @@ const Update = () => {
             <input type='date' className="label-form-update" id='abonado' {...register('abonado', { required: true })} /><br />
             {errors.abonado && <span className='span-error'> La fecha de abonado es requerida </span>}
 
-            <label htmlFor='notas'>Notas</label>
+            <label htmlFor='notas'>Descripción</label>
             <textarea className='label-form-notas' id='notas' {...register('notas', { required: true })} type='text' name='notas' placeholder='' />
             { errors.notas && <span className='span-error'> La casilla de notas es requerida </span>}
             {/* Botón de envío */}
             <button className='boton-form-update' type='submit'>Enviar</button>
            
+        </div> 
           
 
       </form>
     </div>
+    </>
   );
 };
 
