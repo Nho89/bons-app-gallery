@@ -27,7 +27,7 @@ describe("Nav testing",  () =>{
     });
     test("should render logo image", ()=>{
         const logoImage = screen.getByRole('img', { name: /logo/i });
-        expect(logoImage).to.exist;
+        expect(logoImage).toBeDefined();
     })
 
 })

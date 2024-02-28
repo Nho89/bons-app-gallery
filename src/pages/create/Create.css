@@ -17,7 +17,7 @@ body {
     font-size: 4.5rem;
 }
 
-.container-form {
+.container-form-create {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     color: #F6F0BE;
@@ -28,6 +28,11 @@ body {
     background-color: #044C40;
     border-radius: 20px 20px 0 0;
     width: 100%;
+    
+}
+.form-right-create{
+    display: flex;
+    flex-direction: column;
     gap: 5px;
 }
 
@@ -76,5 +81,33 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media only screen and (min-width: 768px) {
-    
+    .container-form-create{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 20px;
+        width: 70%;
+        padding: 0;
+        border-radius: 20px;
+    }
+    .container-create{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-left-create{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #F6F0BE; */
+    }
+    .container-image-create{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-right-create{
+        padding: 10px;
+    }
 }

@@ -62,37 +62,41 @@ const Update = () => {
   }
 };
   return (
-    <>
-      <form className='container-form' onSubmit={handleSubmit(onSubmit)}> 
-        <h1 className='title-bonsais'>Modificar mi bonsái</h1>
-        {/* Campos del formulario */}
-        <label htmlFor="image" >Cambia la imagen de tu Bonsai<img  src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="imagen de un marco de fotos" /></label>
-        <input id="image" type="file" style={{ color: "transparent", opacity: 0, position: "absolute" }}   onChange={changeUploadImage}/>
-        {Url_Imagen && (
-        <div>
-        <img src={Url_Imagen}  alt="Imagen de mi bonsai" style={{maxWidth:"200px"}}/>
-        </div>)
-      }
+    <div  className="container-update">
 
-        <label htmlFor='especie'>Especie:</label>
-        <input type='text' className="label-form-update" id='especie' {...register('especie', { required: 'La especie es requerida' })} /><br />
-        {errors.especie && <span className='span-error'>{errors.especie.message}</span>}
+                <h1 className='title-bonsais'>Modificar mi bonsái</h1>
 
-        <label htmlFor='trasplantado'>Trasplantado:</label>
-        <input type='date' className="label-form-update" id='trasplantado' {...register('trasplantado', { required: true })} /><br />
-        {errors.trasplantado && <span className='span-error'> La fecha de trasplantado es requerida </span>}
+      <form className='container-form-update' onSubmit={handleSubmit(onSubmit)}> 
 
-        <label htmlFor='abonado'>Abonado:</label>
-        <input type='date' className="label-form-update" id='abonado' {...register('abonado', { required: true })} /><br />
-        {errors.abonado && <span className='span-error'> La fecha de abonado es requerida </span>}
+          <label htmlFor="image" >Cambia la imagen de tu Bonsai<img  src="https://res.cloudinary.com/dvko0roau/image/upload/v1708026581/add_frame_tbf87i.png" alt="imagen de un marco de fotos" /></label>
+          <input id="image" type="file" style={{ color: "transparent", opacity: 0, position: "absolute" }}   onChange={changeUploadImage}/>
+          {Url_Imagen && (
+              <div>
+                <img src={Url_Imagen}  alt="Imagen de mi bonsai" style={{maxWidth:"200px"}}/>
+              </div>)}
+        
+            <label htmlFor='especie'>Especie:</label>
+            <input type='text' className="label-form-update" id='especie' {...register('especie', { required: 'La especie es requerida' })} /><br />
+            {errors.especie && <span className='span-error'>{errors.especie.message}</span>}
 
-        <label htmlFor='notas'>Notas</label>
-        <textarea className='label-form-notas' id='notas' {...register('notas', { required: true })} type='text' name='notas' placeholder='' />
-        { errors.notas && <span className='span-error'> La casilla de notas es requerida </span>}
-        {/* Botón de envío */}
-        <button className='boton-form-update' type='submit'>Enviar</button>
+            <label htmlFor='trasplantado'>Trasplantado:</label>
+            <input type='date' className="label-form-update" id='trasplantado' {...register('trasplantado', { required: true })} /><br />
+            {errors.trasplantado && <span className='span-error'> La fecha de trasplantado es requerida </span>}
+
+            <label htmlFor='abonado'>Abonado:</label>
+            <input type='date' className="label-form-update" id='abonado' {...register('abonado', { required: true })} /><br />
+            {errors.abonado && <span className='span-error'> La fecha de abonado es requerida </span>}
+
+            <label htmlFor='notas'>Notas</label>
+            <textarea className='label-form-notas' id='notas' {...register('notas', { required: true })} type='text' name='notas' placeholder='' />
+            { errors.notas && <span className='span-error'> La casilla de notas es requerida </span>}
+            {/* Botón de envío */}
+            <button className='boton-form-update' type='submit'>Enviar</button>
+           
+          
+
       </form>
-    </>
+    </div>
   );
 };
 
