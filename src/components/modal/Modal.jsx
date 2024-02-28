@@ -12,8 +12,9 @@ const Modal = ({isOpen, closeModal, notas}) => {
         cursor={"pointer"}
         />
         <div className="container">
-          <h3 className='subtitle-notas-bonsai'>Detalles de la planta:</h3><br />
+          <h3 className='subtitle-notas-bonsai'>Descripción de la planta</h3><br />
           <p className='notas-bonsai'>{notas}</p>
+          
         </div>
       </div>
   )}

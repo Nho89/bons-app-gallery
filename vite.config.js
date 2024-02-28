@@ -7,4 +7,8 @@ export default defineConfig({
     globals: true, 
     environment: 'jsdom',
   }
+<<<<<<< HEAD
   })
+=======
+})
+>>>>>>> 67ba8cea1984e64cbc47260be55c49edf5563d67
