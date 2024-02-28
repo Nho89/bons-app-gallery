@@ -48,6 +48,7 @@ body {
     justify-content: flex-start;
     overflow: auto;
     margin-top: auto;
+    border-radius: 10px;
 }
 .span-error{
     color: red;
@@ -64,5 +65,5 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 100%;
     padding: 6px;
-    font-family: Poppins;
+    font-family: 'Poppins';
 }

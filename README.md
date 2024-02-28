@@ -2,14 +2,15 @@
 This project is an application called BonsApp Gallery, which consists of performing the __CRUD__ method using POST (Create), GET (Read), PUT (Update) and DELETE (Delete) requests with the library React.js with Node.js.
 
 # 🧾 Description 
-We have developed Tech Revive, a marketplace that offers high quality refurbished technology products at ## Project Configuration
+We have developed an application to manage Bonsais data, to allow the users to record the information to do this little trees.
+
+## Project Configuration
 
 1. **Clone the Repository:**
 
 `bash`
 * Copy code: `git clone https://github.com/Nho89/bons-app-gallery`
-   
-* Copy code: `cd Taller_CRUD`
+* Copy code: `cd bons-app-gallery`
 To enter the repository folder.
 
 2. **Install Dependencies:** 
@@ -18,6 +19,10 @@ To enter the repository folder.
 * Copy code: `npm install`
 * Copy code: `npm run api`
 This will start the JSON server at http://localhost:3000 using the db.json file in the server folder.
+* Copy code: `npm run dev`
+This will start the server.
+* Copy code: `npm run test`
+This will run the tests.
 
 3. **Open the Project:**
 
@@ -33,7 +38,7 @@ This will start the JSON server at http://localhost:3000 using the db.json file 
 3. *assets:* This folder holds static assets like images, fonts, or other media files used in your application.
 4. *services:* This folder may contain modules for interacting with external services or APIs, in this case an archive of Vanilla JS.
 
-* __tests:__ This folder may contain test files for unit or integration testing your components and utilities.
+* __tests:__ This folder may contains tests files for unit or integration testing your components and utilities.
 * __package.json and package-lock.json:__ These files contain metadata about your project and its dependencies. They also include scripts for running various tasks like starting the development server or building the production bundle.
 * __.gitignore:__ Specifies files and folders ignored by Git to prevent irrelevant or automatically generated files from being tracked.
 * __eslintrc.cjs:__ Configuration file for ESLint, a tool that identifies and fixes errors in JavaScript code based on predefined rules.

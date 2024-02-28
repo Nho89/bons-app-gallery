@@ -50,6 +50,7 @@ body {
     display: block;
     overflow: auto;
     margin-top: auto;
+    border-radius: 10px;
 }
 
 .boton-form {
@@ -76,5 +77,24 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 @media only screen and (min-width: 768px) {
-    
+
+    .create-section {
+         display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-form{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        align-content: center;
+        width: 80%;
+    }
+
+    .img-create-form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
 }
