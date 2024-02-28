@@ -17,10 +17,11 @@
       "id": "4"
     },
     {
-      "especie": "cambio",
+      "especie": "Boj",
       "trasplantado": "2024-02-14",
       "abonado": "2024-02-15",
-      "notas": "",
+      "notas": "El boj es originario de Europa, donde crece en forma silvestre desde las islas británicas hasta la costa del mar.",
+      "image": "https://res.cloudinary.com/dputvv9bi/image/upload/v1709145915/bonsai_app_images/d0lb0yifja1tt1dnsnw3.jpg",
       "id": "5"
     },
     {
@@ -64,12 +65,12 @@
       "id": "10"
     },
     {
-      "id": "4e54",
-      "image": "https://res.cloudinary.com/dputvv9bi/image/upload/v1709117232/bonsai_app_images/mgotsytlfomkefz6vmc8.png",
-      "especie": "soy un bonsai",
+      "especie": "Junípero",
       "trasplantado": "2024-02-14",
       "abonado": "2024-02-08",
-      "notas": "Hola soy un bonsai"
+      "notas": "Es una especie de conífera arbórea Son ricos en aceites esenciales y resinas de diferente naturaleza. ¡Venenoso!",
+      "image": "https://res.cloudinary.com/dputvv9bi/image/upload/v1709146316/bonsai_app_images/hkfrf6ogfm57a6tjcscv.jpg",
+      "id": "4e54"
     }
   ]
 }
