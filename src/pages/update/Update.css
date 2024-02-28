@@ -83,8 +83,8 @@ body {
         justify-content: center;
         width: 100%;
     }
+    .container-update{
+        width: 70%;
+    }
     
-    /* .container-update{
-        display: flex;
-    } */
 }
