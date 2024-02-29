@@ -8,19 +8,16 @@ import axios from "axios";
 const Update = () => {
   const [bonsai, setBonsai] = useState({}); 
   const [Url_Imagen, setUrl_Imagen] = useState("");
-  const { id } = useParams(); // obtenemos el parámetro id de la URL
+  const { id } = useParams(); 
   const navigate = useNavigate();
-  const { register, handleSubmit, formState: { errors }, setValue } = useForm(); // con el hook useForm inicializamos un form con funciones y datos para gestionarlo.
+  const { register, handleSubmit, formState: { errors }, setValue } = useForm(); 
 
-//usamos el hook useEffect para realizar efectos secundarios en el componente. 
-//Para obtener los datos del bonsái mediante la función getBonsaiById y se establecerlos como valores predeterminados en el formulario, con la función setValue.
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const bonsaiData = await getBonsaiById(id);
         setBonsai(bonsaiData);
-        // Establecer los valores predeterminados para todos los campos del formulario
         setValue('especie', bonsaiData.especie);
         setValue('abonado', bonsaiData.abonado);
         setValue('trasplantado', bonsaiData.trasplantado);
@@ -32,7 +29,6 @@ const Update = () => {
     fetchData();
   }, [id, setValue]);
 
-  //cuando enviamos el form, se ejecuta la función onSubmit, que llama a updateData, para actualizar datos e ir luego a la home.
   const onSubmit = async (newData) => {
     newData.image = Url_Imagen;
     try {
@@ -43,12 +39,12 @@ const Update = () => {
       console.error('Error al actualizar los datos:', error);
     }
   };
-//gestionamos el envío del form con handleSubmit. Se registran los campos en register.
+.
   const changeUploadImage = async (e) => {
   const file = e.target.files[0];
   const newData = new FormData();
   newData.append("file", file);
-  newData.append("upload_preset", "preset_bonsai"); // Asegúrate de usar el preset correcto
+  newData.append("upload_preset", "preset_bonsai"); 
 
   try {
     const response = await axios.put(
