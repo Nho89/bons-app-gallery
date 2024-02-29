@@ -39,7 +39,7 @@ const Update = () => {
       console.error('Error al actualizar los datos:', error);
     }
   };
-.
+
   const changeUploadImage = async (e) => {
   const file = e.target.files[0];
   const newData = new FormData();
