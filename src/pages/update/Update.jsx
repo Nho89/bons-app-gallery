@@ -96,7 +96,7 @@ const Update = () => {
             <label htmlFor='notas'>Descripción</label>
             <textarea className='label-form-notas' id='notas' {...register('notas', { required: true })} type='text' name='notas' placeholder='' />
             { errors.notas && <span className='span-error'> La casilla de notas es requerida </span>}
-            {/* Botón de envío */}
+            
             <button className='boton-form-update' type='submit'>Enviar</button>
            
         </div> 

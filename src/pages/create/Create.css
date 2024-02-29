@@ -76,20 +76,6 @@ body {
     cursor: pointer;
 }
 
-/* .dates-input-create input[type="date"]::-webkit-calendar-picker-indicator {
-    background: url('../../assets/logo-calendar.png') no-repeat;
-    background-size: cover;
-    width: 20px;
-    height: 20px;
-    border: none;
-    margin-left: 9px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    left: 300px;
-    transform: translateY(-50%);
-} */
-
 @media only screen and (min-width: 768px) {
     .container-form-create{
         display: grid;
@@ -111,7 +97,6 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* background-color: #F6F0BE; */
     }
     .container-image-create{
         display: flex;

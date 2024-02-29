@@ -47,11 +47,6 @@ const changeUploadImage = async (e) => {
         <img src={Url_Imagen}  alt="Imagen de mi bonsai" style={{maxWidth:"200px"}}/>
         </div>)
       }
-      
-      {/* {
-        errors.image && <span>Imagen requerida</span>
-      }
-     */}
      
       <br />
         </div>
