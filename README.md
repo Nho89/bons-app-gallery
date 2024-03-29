@@ -2,7 +2,7 @@
 This project is an application called BonsApp Gallery, which consists of performing the __CRUD__ method using POST (Create), GET (Read), PUT (Update) and DELETE (Delete) requests with the library React.js with Node.js.
 
 # 🧾 Description 
-We have developed an application to manage Bonsais data, to allow the users to record the information to do this little trees.
+We have developed an application to manage bonsais data, to allow users to record the information to do these little trees and to save a photo gallery of them.
 
 ## Project Configuration
 
@@ -36,14 +36,14 @@ This will run the tests.
 1. *components:* This folder contains reusable React components that make up our application's UI. Each component folder contains the subfolders of styles, CSS files or preprocessor files for styling your components.
 2. *pages:* This folder contains React components that represent different pages/routes of our application.
 3. *assets:* This folder holds static assets like images, fonts, or other media files used in your application.
-4. *services:* This folder may contain modules for interacting with external services or APIs, in this case an archive of Vanilla JS.
+4. *services:* This folder contains modules for interacting with external services or APIs, in this case an archive of Vanilla JS.
 
-* __tests:__ This folder may contains tests files for unit or integration testing your components and utilities.
-* __package.json and package-lock.json:__ These files contain metadata about your project and its dependencies. They also include scripts for running various tasks like starting the development server or building the production bundle.
+* __tests:__ This folder contains tests files for unit or integration testing of components and utilities.
+* __package.json and package-lock.json:__ These files hold metadata about the project and its dependencies. They also include scripts for running various tasks like starting the development server or building the production bundle.
 * __.gitignore:__ Specifies files and folders ignored by Git to prevent irrelevant or automatically generated files from being tracked.
 * __eslintrc.cjs:__ Configuration file for ESLint, a tool that identifies and fixes errors in JavaScript code based on predefined rules.
 * __vite.config.js:__ Configuration file for Vite, a build tool focusing on speed, using native ES modules for development efficiency. It configures development and production settings for the project.
-* __README.md:__ This file typically contains instructions on how to set up and run your project, as well as any other relevant information for contributors or users.
+* __README.md:__ This file contains instructions on how to set up and run your project, as well as any other relevant information for contributors or users.
 
 ## Contributions
 Contributions are welcome! If you find any problems or have suggestions for improvement, please create an issue or make a pull request.
@@ -51,7 +51,7 @@ Contributions are welcome! If you find any problems or have suggestions for impr
 # Technologies 
 ![Our Skills](https://skillicons.dev/icons?i=html,css,js,git,figma,github,vite,discord,react)
 
-# 🧙🏻‍♀️ Autors 
+# 🧙🏻‍♀️ Authors 
 
  - Beatriz Mercado  https://github.com/BeatrizMercado
  - Raquel Lores  https://github.com/RaquelLores
